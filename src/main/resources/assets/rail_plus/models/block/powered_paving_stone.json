@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "rail_plus:block/paving_stone",
+    "east": "rail_plus:block/paving_stone",
+    "north": "rail_plus:block/paving_stone",
+    "particle": "rail_plus:block/paving_stone",
+    "south": "rail_plus:block/paving_stone",
+    "up": "rail_plus:block/powered_paving_stone",
+    "west": "rail_plus:block/paving_stone"
+  }
+}

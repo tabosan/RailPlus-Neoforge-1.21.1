@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "rail_plus:block/light_gray_framed_lamp"
+  }
+}

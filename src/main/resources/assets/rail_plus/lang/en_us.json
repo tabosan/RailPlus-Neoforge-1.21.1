@@ -1,0 +1,30 @@
+{
+  "item.rail_plus.ender_dust": "Ender Dust",
+  "item.rail_plus.ender_steel_ingot": "Ender Steel Ingot",
+  "item.rail_plus.ender_plate": "Ender Plate",
+
+  "block.rail_plus.white_framed_lamp": "White Framed Lamp",
+  "block.rail_plus.orange_framed_lamp": "Orange Framed Lamp",
+  "block.rail_plus.magenta_framed_lamp": "Magenta Framed Lamp",
+  "block.rail_plus.light_blue_framed_lamp": "Light Blue Framed Lamp",
+  "block.rail_plus.yellow_framed_lamp": "Yellow Framed Lamp",
+  "block.rail_plus.lime_framed_lamp": "Lime Framed Lamp",
+  "block.rail_plus.pink_framed_lamp": "Pink Framed Lamp",
+  "block.rail_plus.gray_framed_lamp": "Gray Framed Lamp",
+  "block.rail_plus.light_gray_framed_lamp": "Light Gray Framed Lamp",
+  "block.rail_plus.cyan_framed_lamp": "Cyan Framed Lamp",
+  "block.rail_plus.purple_framed_lamp": "Purple Framed Lamp",
+  "block.rail_plus.blue_framed_lamp": "Blue Framed Lamp",
+  "block.rail_plus.brown_framed_lamp": "Brown Framed Lamp",
+  "block.rail_plus.green_framed_lamp": "Green Framed Lamp",
+  "block.rail_plus.red_framed_lamp": "Red Framed Lamp",
+  "block.rail_plus.black_framed_lamp": "Black Framed Lamp",
+
+  "block.rail_plus.paving_gravel": "Paving Gravel for Rails",
+  "block.rail_plus.paving_stone": "Paving Stone for Rails",
+  "block.rail_plus.powered_paving_stone": "Powered Paving Gravel for Rails",
+
+  "block.rail_plus.red_cactus": "Red Cactus",
+
+  "itemGroup.rail_plus.rail_plus": "Rail Plus"
+}
