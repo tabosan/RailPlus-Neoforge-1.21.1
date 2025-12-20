@@ -40,4 +40,5 @@ public class RedCactusBlock extends CactusBlock {
 
         return false;
     }
+
 }

@@ -41,10 +41,17 @@ public class CreativeTabInit {
                 output.accept(BlockInit.BLACK_FRAMED_LAMP);
 
                 output.accept(BlockInit.PAVING_GRAVEL);
+                output.accept(BlockInit.PAVING_GRAVEL_STAIRS);
+                output.accept(BlockInit.PAVING_GRAVEL_SLAB);
                 output.accept(BlockInit.PAVING_STONE);
                 output.accept(BlockInit.POWERED_PAVING_STONE);
+                output.accept(BlockInit.PAVING_STONE_STAIRS);
+                output.accept(BlockInit.PAVING_STONE_SLAB);
 
                 output.accept(BlockInit.RED_CACTUS);
+
+                output.accept(BlockInit.YELLOW_RAILROAD_CROSSING_FENCE);
+                output.accept(BlockInit.WHITE_RAILROAD_CROSSING_FENCE);
             }).build());
 
     public static void register(IEventBus eventBus){

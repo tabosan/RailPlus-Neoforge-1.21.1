@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "rail_plus:block/paving_stone",
+    "side": "rail_plus:block/paving_stone",
+    "top": "rail_plus:block/paving_stone"
+  }
+}

@@ -3,6 +3,12 @@ package com.taabosan.railplus;
 import com.taabosan.railplus.block.BlockInit;
 import com.taabosan.railplus.creative_tab.CreativeTabInit;
 import com.taabosan.railplus.item.ItemInit;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.ChunkRenderTypeSet;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -54,5 +60,13 @@ public class RailPlus {
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
+    }
+
+    @EventBusSubscriber(modid = MOD_ID, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetUp(FMLClientSetupEvent event){
+            ItemBlockRenderTypes.setRenderLayer(BlockInit.RED_CACTUS.get(), RenderType.cutout());
+        }
     }
 }

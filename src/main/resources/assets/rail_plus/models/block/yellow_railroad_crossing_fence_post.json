@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "rail_plus:block/yellow_railroad_crossing_fence"
+  }
+}

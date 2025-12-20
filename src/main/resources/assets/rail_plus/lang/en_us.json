@@ -3,6 +3,7 @@
   "item.rail_plus.ender_steel_ingot": "Ender Steel Ingot",
   "item.rail_plus.ender_plate": "Ender Plate",
 
+  "block.rail_plus.ender_steel_block": "Ender Steel Block",
   "block.rail_plus.white_framed_lamp": "White Framed Lamp",
   "block.rail_plus.orange_framed_lamp": "Orange Framed Lamp",
   "block.rail_plus.magenta_framed_lamp": "Magenta Framed Lamp",
@@ -21,10 +22,17 @@
   "block.rail_plus.black_framed_lamp": "Black Framed Lamp",
 
   "block.rail_plus.paving_gravel": "Paving Gravel for Rails",
+  "block.rail_plus.paving_gravel_stairs": "Paving Gravel Stairs for Rails",
+  "block.rail_plus.paving_gravel_slab": "Paving Gravel Slab for Rails",
   "block.rail_plus.paving_stone": "Paving Stone for Rails",
   "block.rail_plus.powered_paving_stone": "Powered Paving Gravel for Rails",
+  "block.rail_plus.paving_stone_stairs": "Paving Stone Stairs for Rails",
+  "block.rail_plus.paving_stone_slab": "Paving Stone Slab for Rails",
 
   "block.rail_plus.red_cactus": "Red Cactus",
+
+  "block.rail_plus.yellow_railroad_crossing_fence": "Yellow Railroad Crossing Fence",
+  "block.rail_plus.white_railroad_crossing_fence": "White Railroad Crossing Fence",
 
   "itemGroup.rail_plus.rail_plus": "Rail Plus"
 }

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "rail_plus:paving_stone"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "R",
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "rail_plus:powered_paving_stone"
+  }
+}

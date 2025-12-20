@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "rail_plus:block/paving_gravel",
+    "side": "rail_plus:block/paving_gravel",
+    "top": "rail_plus:block/paving_gravel"
+  }
+}
