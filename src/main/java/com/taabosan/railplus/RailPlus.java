@@ -70,6 +70,7 @@ public class RailPlus {
             ItemBlockRenderTypes.setRenderLayer(BlockInit.SLAB_RAIL.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlockInit.POWERED_SLAB_RAIL.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlockInit.DETECTOR_SLAB_RAIL.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(BlockInit.ACTIVATOR_SLAB_RAIL.get(), RenderType.cutout());
         }
     }
 }
