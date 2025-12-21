@@ -71,6 +71,11 @@
   "block.rail_plus.paving_stone_stairs": "Paving Stone Stairs for Rails",
   "block.rail_plus.paving_stone_slab": "Paving Stone Slab for Rails",
 
+  "block.rail_plus.slab_rail": "Slab Rail",
+  "block.rail_plus.powered_slab_rail": "Powered Slab Rail",
+  "block.rail_plus.detector_slab_rail": "Detector Slab Rail",
+  "block.rail_plus.activator_slab_rail": "Activator Slab Rail",
+
   "block.rail_plus.red_cactus": "Red Cactus",
 
   "block.rail_plus.yellow_railroad_crossing_fence": "Yellow Railroad Crossing Fence",

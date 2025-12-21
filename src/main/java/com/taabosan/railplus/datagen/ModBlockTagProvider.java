@@ -2,6 +2,7 @@ package com.taabosan.railplus.datagen;
 
 import com.taabosan.railplus.RailPlus;
 import com.taabosan.railplus.block.BlockInit;
+import com.taabosan.railplus.util.TagInit;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -101,6 +102,23 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.RED_NETHER_HARDENED_BRICKS.get())
                 .add(BlockInit.ICE_HARDENED_BRICKS.get())
                 .add(BlockInit.SNOW_HARDENED_BRICKS.get())
+        ;
+
+        tag(BlockTags.RAILS)
+                .add(BlockInit.SLAB_RAIL.get())
+                .add(BlockInit.POWERED_SLAB_RAIL.get())
+                .add(BlockInit.DETECTOR_SLAB_RAIL.get())
+                .add(BlockInit.ACTIVATOR_SLAB_RAIL.get())
+        ;
+
+        tag(TagInit.Blocks.SLAB_RAIL_PLACEABLE)
+                .add(BlockInit.PAVING_GRAVEL.get())
+                .add(BlockInit.PAVING_GRAVEL_STAIRS.get())
+                .add(BlockInit.PAVING_GRAVEL_SLAB.get())
+                .add(BlockInit.PAVING_STONE.get())
+                .add(BlockInit.POWERED_PAVING_STONE.get())
+                .add(BlockInit.PAVING_STONE_STAIRS.get())
+                .add(BlockInit.PAVING_STONE_SLAB.get())
         ;
 
         tag(BlockTags.FENCES)

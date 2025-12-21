@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/rail_flat",
+  "textures": {
+    "rail": "rail_plus:block/activator_slab_rail"
+  }
+}

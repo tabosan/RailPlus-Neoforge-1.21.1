@@ -67,6 +67,9 @@ public class RailPlus {
         @SubscribeEvent
         public static void onClientSetUp(FMLClientSetupEvent event){
             ItemBlockRenderTypes.setRenderLayer(BlockInit.RED_CACTUS.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(BlockInit.SLAB_RAIL.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(BlockInit.POWERED_SLAB_RAIL.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(BlockInit.DETECTOR_SLAB_RAIL.get(), RenderType.cutout());
         }
     }
 }

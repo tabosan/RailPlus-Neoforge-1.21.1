@@ -85,6 +85,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(BlockInit.PAVING_STONE_SLAB.get(),
                 block -> createSlabItemTable(BlockInit.PAVING_STONE_SLAB.get()));
 
+        dropSelf(BlockInit.SLAB_RAIL.get());
+        dropSelf(BlockInit.POWERED_SLAB_RAIL.get());
+        dropSelf(BlockInit.DETECTOR_SLAB_RAIL.get());
+        dropSelf(BlockInit.ACTIVATOR_SLAB_RAIL.get());
+
         dropSelf(BlockInit.YELLOW_RAILROAD_CROSSING_FENCE.get());
         dropSelf(BlockInit.WHITE_RAILROAD_CROSSING_FENCE.get());
 

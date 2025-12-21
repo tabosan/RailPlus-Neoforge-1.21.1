@@ -46,7 +46,6 @@ public class BlockInit {
                     .sound(SoundType.METAL)));
 
     //coloured framed lamps
-
     public static final DeferredBlock<Block> WHITE_FRAMED_LAMP = registerBlock("white_framed_lamp",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.SNOW)
@@ -191,6 +190,7 @@ public class BlockInit {
                     .isRedstoneConductor(BlockInit::never)
             ));
 
+    //hardened bricks
     public static final DeferredBlock<Block> STONE_HARDENED_BRICKS = registerBlock("stone_hardened_bricks",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE)
@@ -473,8 +473,6 @@ public class BlockInit {
             ));
 
 
-
-
     public static final DeferredBlock<Block> PAVING_GRAVEL = registerBlock("paving_gravel",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE)
@@ -517,6 +515,35 @@ public class BlockInit {
     public static final DeferredBlock<SlabBlock> PAVING_STONE_SLAB = registerBlock("paving_stone_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(PAVING_STONE.get())));
 
+    public  static final DeferredBlock<SlabRailBlock> SLAB_RAIL = registerBlock("slab_rail",
+            () -> new SlabRailBlock(BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .strength(0.7F)
+                    .sound(SoundType.METAL)
+            ));
+
+    public  static final DeferredBlock<PoweredSlabRailBlock> POWERED_SLAB_RAIL = registerBlock("powered_slab_rail",
+            () -> new PoweredSlabRailBlock(BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .strength(0.7F)
+                    .sound(SoundType.METAL)
+            ,true
+            ));
+
+    public static final DeferredBlock<DetectorSlabRailBlock> DETECTOR_SLAB_RAIL = registerBlock("detector_slab_rail",
+            () -> new DetectorSlabRailBlock(BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .strength(0.7F)
+                    .sound(SoundType.METAL)
+            ));
+
+    public static final DeferredBlock<PoweredSlabRailBlock> ACTIVATOR_SLAB_RAIL = registerBlock("activator_slab_rail",
+            () -> new PoweredSlabRailBlock(BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .strength(0.7F)
+                    .sound(SoundType.METAL)
+            ));
+
     public static final DeferredBlock<RedCactusBlock> RED_CACTUS = registerBlock("red_cactus",
             () -> new RedCactusBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_RED)
@@ -526,6 +553,7 @@ public class BlockInit {
                     .pushReaction(PushReaction.DESTROY)
             ));
 
+    //crossing fence
     public static final DeferredBlock<FenceBlock> YELLOW_RAILROAD_CROSSING_FENCE = registerBlock("yellow_railroad_crossing_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_YELLOW)
