@@ -17,6 +17,10 @@ public class CreativeTabInit {
             .title(Component.translatable("itemGroup.rail_plus.rail_plus"))
             .icon(() -> ItemInit.ENDER_STEEL_INGOT.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
+                output.accept(ItemInit.RUSTED_RAIL);
+                output.accept(ItemInit.RUSTED_RAIL_BUNDLE);
+                output.accept(ItemInit.RUSTED_RAIL_STACK);
+
                 output.accept(ItemInit.ENDER_DUST);
                 output.accept(ItemInit.ENDER_STEEL_INGOT);
                 output.accept(ItemInit.ENDER_PLATE);
@@ -39,6 +43,44 @@ public class CreativeTabInit {
                 output.accept(BlockInit.GREEN_FRAMED_LAMP);
                 output.accept(BlockInit.RED_FRAMED_LAMP);
                 output.accept(BlockInit.BLACK_FRAMED_LAMP);
+
+                output.accept(BlockInit.STONE_HARDENED_BRICKS);
+                output.accept(BlockInit.COBBLESTONE_HARDENED_BRICKS);
+                output.accept(BlockInit.NETHERRACK_HARDENED_BRICKS);
+                output.accept(BlockInit.NETHER_HARDENED_BRICKS);
+                output.accept(BlockInit.SANDSTONE_HARDENED_BRICKS);
+                output.accept(BlockInit.RED_SANDSTONE_HARDENED_BRICKS);
+                output.accept(BlockInit.GRANITE_HARDENED_BRICKS);
+                output.accept(BlockInit.DIORITE_HARDENED_BRICKS);
+                output.accept(BlockInit.ANDESITE_HARDENED_BRICKS);
+                output.accept(BlockInit.BASALT_HARDENED_BRICKS);
+                output.accept(BlockInit.QUARTZ_HARDENED_BRICKS);
+                output.accept(BlockInit.BLACK_QUARTZ_HARDENED_BRICKS);
+                output.accept(BlockInit.NETHER_WART_HARDENED_BRICKS);
+                output.accept(BlockInit.RED_NETHER_HARDENED_BRICKS);
+                output.accept(BlockInit.ICE_HARDENED_BRICKS);
+                output.accept(BlockInit.SNOW_HARDENED_BRICKS);
+
+                output.accept(BlockInit.OAK_BOOKSHELF);
+                output.accept(BlockInit.SPRUCE_BOOKSHELF);
+                output.accept(BlockInit.BIRCH_BOOKSHELF);
+                output.accept(BlockInit.JUNGLE_BOOKSHELF);
+                output.accept(BlockInit.ACACIA_BOOKSHELF);
+                output.accept(BlockInit.CHERRY_BOOKSHELF);
+                output.accept(BlockInit.DARK_OAK_BOOKSHELF);
+                output.accept(BlockInit.MANGROVE_BOOKSHELF);
+                output.accept(BlockInit.CRIMSON_BOOKSHELF);
+                output.accept(BlockInit.WARPED_BOOKSHELF);
+
+                output.accept(BlockInit.IRON_FLOOR);
+                output.accept(BlockInit.DIAMOND_FLOOR);
+                output.accept(BlockInit.EMERALD_FLOOR);
+
+                output.accept(BlockInit.IRON_BRICKS);
+                output.accept(BlockInit.GOLD_BRICKS);
+
+                output.accept(BlockInit.STONE_PAVEMENT);
+                output.accept(BlockInit.SANDSTONE_PAVEMENT);
 
                 output.accept(BlockInit.PAVING_GRAVEL);
                 output.accept(BlockInit.PAVING_GRAVEL_STAIRS);

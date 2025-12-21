@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "rail_plus:block/cherry_bookshelf",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "rail_plus:block/cherry_bookshelf"
+    },
+    "facing=south": {
+      "model": "rail_plus:block/cherry_bookshelf",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "rail_plus:block/cherry_bookshelf",
+      "y": 270
+    }
+  }
+}
