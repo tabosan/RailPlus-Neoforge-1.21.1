@@ -498,8 +498,8 @@ public class BlockInit {
                     .isValidSpawn(BlockInit::never)
             ));
 
-    public static final DeferredBlock<PoweredBlock> POWERED_PAVING_STONE = registerBlock("powered_paving_stone",
-            () -> new PoweredBlock(BlockBehaviour.Properties.of()
+    public static final DeferredBlock<PoweredPavingStoneBlock> POWERED_PAVING_STONE = registerBlock("powered_paving_stone",
+            () -> new PoweredPavingStoneBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresCorrectToolForDrops()
