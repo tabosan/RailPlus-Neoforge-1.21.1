@@ -198,6 +198,55 @@ public class BlockInit {
                     .isRedstoneConductor(BlockInit::never)
             ));
 
+    //framed lamp slab
+    public static final DeferredBlock<SlabBlock> WHITE_FRAMED_LAMP_SLAB = registerBlock("white_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> ORANGE_FRAMED_LAMP_SLAB = registerBlock("orange_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(ORANGE_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> MAGENTA_FRAMED_LAMP_SLAB = registerBlock("magenta_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(MAGENTA_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> LIGHT_BLUE_FRAMED_LAMP_SLAB = registerBlock("light_blue_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(LIGHT_BLUE_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> YELLOW_FRAMED_LAMP_SLAB = registerBlock("yellow_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(YELLOW_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> LIME_FRAMED_LAMP_SLAB = registerBlock("lime_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(LIME_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> PINK_FRAMED_LAMP_SLAB = registerBlock("pink_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(PINK_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> GRAY_FRAMED_LAMP_SLAB = registerBlock("gray_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(GRAY_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> LIGHT_GRAY_FRAMED_LAMP_SLAB = registerBlock("light_gray_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(LIGHT_GRAY_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> CYAN_FRAMED_LAMP_SLAB = registerBlock("cyan_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(CYAN_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> PURPLE_FRAMED_LAMP_SLAB = registerBlock("purple_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(PURPLE_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> BLUE_FRAMED_LAMP_SLAB = registerBlock("blue_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(BLUE_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> BROWN_FRAMED_LAMP_SLAB = registerBlock("brown_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(BROWN_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> GREEN_FRAMED_LAMP_SLAB = registerBlock("green_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(GREEN_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> RED_FRAMED_LAMP_SLAB = registerBlock("red_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(RED_FRAMED_LAMP.get())));
+
+    public static final DeferredBlock<SlabBlock> BLACK_FRAMED_LAMP_SLAB = registerBlock("black_framed_lamp_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(BLACK_FRAMED_LAMP.get())));
+
     //hardened bricks
     public static final DeferredBlock<Block> STONE_HARDENED_BRICKS = registerBlock("stone_hardened_bricks",
             () -> new Block(BlockBehaviour.Properties.of()

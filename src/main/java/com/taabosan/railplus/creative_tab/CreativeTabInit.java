@@ -46,6 +46,23 @@ public class CreativeTabInit {
                 output.accept(BlockInit.RED_FRAMED_LAMP);
                 output.accept(BlockInit.BLACK_FRAMED_LAMP);
 
+                output.accept(BlockInit.WHITE_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.ORANGE_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.MAGENTA_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.LIGHT_BLUE_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.YELLOW_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.LIME_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.PINK_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.GRAY_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.LIGHT_GRAY_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.CYAN_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.PURPLE_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.BLUE_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.BROWN_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.GREEN_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.RED_FRAMED_LAMP_SLAB);
+                output.accept(BlockInit.BLACK_FRAMED_LAMP_SLAB);
+
                 output.accept(BlockInit.STONE_HARDENED_BRICKS);
                 output.accept(BlockInit.COBBLESTONE_HARDENED_BRICKS);
                 output.accept(BlockInit.NETHERRACK_HARDENED_BRICKS);

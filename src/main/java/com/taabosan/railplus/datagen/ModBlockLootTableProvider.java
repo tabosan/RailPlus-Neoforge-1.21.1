@@ -38,6 +38,54 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockInit.RED_FRAMED_LAMP.get());
         dropSelf(BlockInit.BLACK_FRAMED_LAMP.get());
 
+        add(BlockInit.WHITE_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.WHITE_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.ORANGE_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.ORANGE_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.MAGENTA_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.MAGENTA_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.LIGHT_BLUE_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.LIGHT_BLUE_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.YELLOW_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.YELLOW_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.LIME_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.LIME_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.PINK_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.PINK_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.GRAY_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.GRAY_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.LIGHT_GRAY_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.LIGHT_GRAY_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.CYAN_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.CYAN_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.PURPLE_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.PURPLE_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.BLUE_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.BLUE_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.BROWN_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.BROWN_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.GREEN_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.GREEN_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.RED_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.RED_FRAMED_LAMP_SLAB.get()));
+
+        add(BlockInit.BLACK_FRAMED_LAMP_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.BLACK_FRAMED_LAMP_SLAB.get()));
+
         dropSelf(BlockInit.STONE_HARDENED_BRICKS.get());
         dropSelf(BlockInit.COBBLESTONE_HARDENED_BRICKS.get());
         dropSelf(BlockInit.NETHERRACK_HARDENED_BRICKS.get());

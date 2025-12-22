@@ -38,6 +38,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(BlockInit.RED_FRAMED_LAMP);
         blockWithItem(BlockInit.BLACK_FRAMED_LAMP);
 
+        slabBlockWithItem(BlockInit.WHITE_FRAMED_LAMP_SLAB.get(), BlockInit.WHITE_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.ORANGE_FRAMED_LAMP_SLAB.get(), BlockInit.ORANGE_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.MAGENTA_FRAMED_LAMP_SLAB.get(), BlockInit.MAGENTA_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.LIGHT_BLUE_FRAMED_LAMP_SLAB.get(), BlockInit.LIGHT_BLUE_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.YELLOW_FRAMED_LAMP_SLAB.get(), BlockInit.YELLOW_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.LIME_FRAMED_LAMP_SLAB.get(), BlockInit.LIME_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.PINK_FRAMED_LAMP_SLAB.get(), BlockInit.PINK_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.GRAY_FRAMED_LAMP_SLAB.get(), BlockInit.GRAY_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.LIGHT_GRAY_FRAMED_LAMP_SLAB.get(), BlockInit.LIGHT_GRAY_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.CYAN_FRAMED_LAMP_SLAB.get(), BlockInit.CYAN_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.PURPLE_FRAMED_LAMP_SLAB.get(), BlockInit.PURPLE_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.BLUE_FRAMED_LAMP_SLAB.get(), BlockInit.BLUE_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.BROWN_FRAMED_LAMP_SLAB.get(), BlockInit.BROWN_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.GREEN_FRAMED_LAMP_SLAB.get(), BlockInit.GREEN_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.RED_FRAMED_LAMP_SLAB.get(), BlockInit.RED_FRAMED_LAMP.get());
+        slabBlockWithItem(BlockInit.BLACK_FRAMED_LAMP_SLAB.get(), BlockInit.BLACK_FRAMED_LAMP.get());
+
         blockWithItem(BlockInit.STONE_HARDENED_BRICKS);
         blockWithItem(BlockInit.COBBLESTONE_HARDENED_BRICKS);
         blockWithItem(BlockInit.NETHERRACK_HARDENED_BRICKS);
