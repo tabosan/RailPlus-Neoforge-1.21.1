@@ -4,10 +4,7 @@ import com.taabosan.railplus.RailPlus;
 import com.taabosan.railplus.block.BlockInit;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FenceBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -21,6 +18,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(BlockInit.ENDER_STEEL_BLOCK);
+
+        buttonBlockWithItem(BlockInit.INVISIBLE_BUTTON.get());
 
         blockWithItem(BlockInit.WHITE_FRAMED_LAMP);
         blockWithItem(BlockInit.ORANGE_FRAMED_LAMP);
@@ -127,6 +126,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void fenceBlockWithItem(Block block) {
         fenceBlock((FenceBlock) block, blockTexture(block));
         simpleBlockItem(block, models().fenceInventory(getName(block) + "_inventory", blockTexture(block)));
+    }
+
+    private void buttonBlockWithItem(Block block, Block fullTextureBlock) {
+        buttonBlock((ButtonBlock) block, blockTexture(fullTextureBlock));
+        simpleBlockItem(block, models().buttonInventory(getName(block) + "_inventory", blockTexture(fullTextureBlock)));
+    }
+
+    private void buttonBlockWithItem(Block block) {
+        buttonBlock((ButtonBlock) block, blockTexture(block));
+        simpleBlockItem(block, models().buttonInventory(getName(block) + "_inventory", blockTexture(block)));
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock){

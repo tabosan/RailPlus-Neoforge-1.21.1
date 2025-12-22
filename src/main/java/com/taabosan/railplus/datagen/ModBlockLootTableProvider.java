@@ -19,6 +19,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(BlockInit.ENDER_STEEL_BLOCK.get());
 
+        dropSelf(BlockInit.INVISIBLE_BUTTON.get());
+
         dropSelf(BlockInit.WHITE_FRAMED_LAMP.get());
         dropSelf(BlockInit.ORANGE_FRAMED_LAMP.get());
         dropSelf(BlockInit.MAGENTA_FRAMED_LAMP.get());

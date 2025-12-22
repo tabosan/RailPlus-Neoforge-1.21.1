@@ -22,6 +22,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(BlockInit.ENDER_STEEL_BLOCK.get())
 
+                .add(BlockInit.INVISIBLE_BUTTON.get())
+
                 .add(BlockInit.STONE_HARDENED_BRICKS.get())
                 .add(BlockInit.COBBLESTONE_HARDENED_BRICKS.get())
                 .add(BlockInit.NETHERRACK_HARDENED_BRICKS.get())
@@ -103,6 +105,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.ICE_HARDENED_BRICKS.get())
                 .add(BlockInit.SNOW_HARDENED_BRICKS.get())
         ;
+
+        tag(BlockTags.BUTTONS).add(BlockInit.INVISIBLE_BUTTON.get());
 
         tag(BlockTags.RAILS)
                 .add(BlockInit.SLAB_RAIL.get())

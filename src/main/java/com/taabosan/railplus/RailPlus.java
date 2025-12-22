@@ -1,10 +1,13 @@
 package com.taabosan.railplus;
 
+import com.taabosan.railplus.block.BlockEntityInit;
 import com.taabosan.railplus.block.BlockInit;
+import com.taabosan.railplus.block.InvisibleButtonBlockEntityRenderer;
 import com.taabosan.railplus.creative_tab.CreativeTabInit;
 import com.taabosan.railplus.item.ItemInit;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -40,6 +43,8 @@ public class RailPlus {
         BlockInit.register(modEventBus);
         CreativeTabInit.register(modEventBus);
 
+        BlockEntityInit.BLOCK_ENTITY_TYPES.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
 
     }
@@ -66,6 +71,11 @@ public class RailPlus {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetUp(FMLClientSetupEvent event){
+            BlockEntityRenderers.register(
+                    BlockEntityInit.INVISIBLE_BUTTON.get(),
+                    InvisibleButtonBlockEntityRenderer::new
+            );
+
             ItemBlockRenderTypes.setRenderLayer(BlockInit.RED_CACTUS.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlockInit.SLAB_RAIL.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlockInit.POWERED_SLAB_RAIL.get(), RenderType.cutout());

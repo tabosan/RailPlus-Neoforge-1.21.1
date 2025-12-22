@@ -27,6 +27,8 @@ public class CreativeTabInit {
 
                 output.accept(BlockInit.ENDER_STEEL_BLOCK);
 
+                output.accept(BlockInit.INVISIBLE_BUTTON);
+
                 output.accept(BlockInit.WHITE_FRAMED_LAMP);
                 output.accept(BlockInit.ORANGE_FRAMED_LAMP);
                 output.accept(BlockInit.MAGENTA_FRAMED_LAMP);

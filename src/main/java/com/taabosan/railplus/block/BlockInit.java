@@ -11,6 +11,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -44,6 +45,13 @@ public class BlockInit {
                     .requiresCorrectToolForDrops()
                     .strength(5.0f, 6.0f)
                     .sound(SoundType.METAL)));
+
+    public static final DeferredBlock<InvisibleButtonBlock> INVISIBLE_BUTTON = registerBlock("invisible_button",
+            () -> new InvisibleButtonBlock(BlockSetType.STONE, 30, BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .strength(0.5f)
+                    .pushReaction(PushReaction.DESTROY)
+            ));
 
     //coloured framed lamps
     public static final DeferredBlock<Block> WHITE_FRAMED_LAMP = registerBlock("white_framed_lamp",
