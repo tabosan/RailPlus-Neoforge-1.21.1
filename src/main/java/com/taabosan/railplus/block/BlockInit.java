@@ -19,6 +19,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.EnumMap;
+import java.util.Map;
 import java.util.function.Supplier;
 
 public class BlockInit {
@@ -53,328 +55,59 @@ public class BlockInit {
                     .pushReaction(PushReaction.DESTROY)
             ));
 
-    //coloured framed lamps
-    public static final DeferredBlock<Block> WHITE_FRAMED_LAMP = registerBlock("white_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.SNOW)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
+    //framed lamps
+    public static final Map<FramedLampColor, DeferredBlock<Block>> FRAMED_LAMPS =
+            new EnumMap<>(FramedLampColor.class);
 
-    public static final DeferredBlock<Block> ORANGE_FRAMED_LAMP = registerBlock("orange_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_ORANGE)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
+    static {
+        for (FramedLampColor color : FramedLampColor.values()) {
+            FRAMED_LAMPS.put(color,
+                    registerBlock(color.blockName(),
+                            () -> new Block(framedLampProperties(color.mapColor))));
+        }
+    }
 
-    public static final DeferredBlock<Block> MAGENTA_FRAMED_LAMP = registerBlock("magenta_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_MAGENTA)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
+    public static final Map<FramedLampColor, DeferredBlock<SlabBlock>> FRAMED_LAMP_SLABS =
+            new EnumMap<>(FramedLampColor.class);
 
-    public static final DeferredBlock<Block> LIGHT_BLUE_FRAMED_LAMP = registerBlock("light_blue_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_LIGHT_BLUE)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    public static final DeferredBlock<Block> YELLOW_FRAMED_LAMP = registerBlock("yellow_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_YELLOW)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    public static final DeferredBlock<Block> LIME_FRAMED_LAMP = registerBlock("lime_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_LIGHT_GREEN)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    public static final DeferredBlock<Block> PINK_FRAMED_LAMP = registerBlock("pink_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_PINK)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    public static final DeferredBlock<Block> GRAY_FRAMED_LAMP = registerBlock("gray_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_GRAY)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    public static final DeferredBlock<Block> LIGHT_GRAY_FRAMED_LAMP = registerBlock("light_gray_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    public static final DeferredBlock<Block> CYAN_FRAMED_LAMP = registerBlock("cyan_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_CYAN)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    public static final DeferredBlock<Block> PURPLE_FRAMED_LAMP = registerBlock("purple_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_PURPLE)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    public static final DeferredBlock<Block> BLUE_FRAMED_LAMP = registerBlock("blue_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_BLUE)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    public static final DeferredBlock<Block> BROWN_FRAMED_LAMP = registerBlock("brown_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_BROWN)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    public static final DeferredBlock<Block> GREEN_FRAMED_LAMP = registerBlock("green_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_GREEN)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    public static final DeferredBlock<Block> RED_FRAMED_LAMP = registerBlock("red_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_RED)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    public static final DeferredBlock<Block> BLACK_FRAMED_LAMP = registerBlock("black_framed_lamp",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_BLACK)
-                    .strength(0.3f, 6.0f)
-                    .sound(SoundType.GLASS)
-                    .lightLevel(state -> 15)
-                    .isRedstoneConductor(BlockInit::never)
-            ));
-
-    //framed lamp slab
-    public static final DeferredBlock<SlabBlock> WHITE_FRAMED_LAMP_SLAB = registerBlock("white_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> ORANGE_FRAMED_LAMP_SLAB = registerBlock("orange_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(ORANGE_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> MAGENTA_FRAMED_LAMP_SLAB = registerBlock("magenta_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(MAGENTA_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> LIGHT_BLUE_FRAMED_LAMP_SLAB = registerBlock("light_blue_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(LIGHT_BLUE_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> YELLOW_FRAMED_LAMP_SLAB = registerBlock("yellow_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(YELLOW_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> LIME_FRAMED_LAMP_SLAB = registerBlock("lime_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(LIME_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> PINK_FRAMED_LAMP_SLAB = registerBlock("pink_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(PINK_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> GRAY_FRAMED_LAMP_SLAB = registerBlock("gray_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(GRAY_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> LIGHT_GRAY_FRAMED_LAMP_SLAB = registerBlock("light_gray_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(LIGHT_GRAY_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> CYAN_FRAMED_LAMP_SLAB = registerBlock("cyan_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(CYAN_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> PURPLE_FRAMED_LAMP_SLAB = registerBlock("purple_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(PURPLE_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> BLUE_FRAMED_LAMP_SLAB = registerBlock("blue_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(BLUE_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> BROWN_FRAMED_LAMP_SLAB = registerBlock("brown_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(BROWN_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> GREEN_FRAMED_LAMP_SLAB = registerBlock("green_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(GREEN_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> RED_FRAMED_LAMP_SLAB = registerBlock("red_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(RED_FRAMED_LAMP.get())));
-
-    public static final DeferredBlock<SlabBlock> BLACK_FRAMED_LAMP_SLAB = registerBlock("black_framed_lamp_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(BLACK_FRAMED_LAMP.get())));
+    static {
+        for (FramedLampColor color : FramedLampColor.values()) {
+            FRAMED_LAMP_SLABS.put(color,
+                    registerBlock(color.slabName(),
+                            () -> new SlabBlock(
+                                    BlockBehaviour.Properties.ofFullCopy(
+                                            FRAMED_LAMPS.get(color).get()
+                                    )
+                            )));
+        }
+    }
 
     //hardened bricks
-    public static final DeferredBlock<Block> STONE_HARDENED_BRICKS = registerBlock("stone_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.STONE)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
+    public static final Map<HardenedBricksType, DeferredBlock<Block>> HARDENED_BRICKS =
+            new EnumMap<>(HardenedBricksType.class);
 
-    public static final DeferredBlock<Block> COBBLESTONE_HARDENED_BRICKS = registerBlock("cobblestone_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.STONE)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
+    static {
+        for (HardenedBricksType type : HardenedBricksType.values()) {
+            HARDENED_BRICKS.put(type,
+                    registerBlock(type.blockName(),
+                            () -> new Block(hardenedBrickProperties(type.mapColor))));
+        }
+    }
 
-    public static final DeferredBlock<Block> NETHERRACK_HARDENED_BRICKS = registerBlock("netherrack_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.NETHER)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
+    public static final Map<HardenedBricksType, DeferredBlock<SlabBlock>> HARDENED_BRICKS_SLABS =
+            new EnumMap<>(HardenedBricksType.class);
 
-    public static final DeferredBlock<Block> NETHER_HARDENED_BRICKS = registerBlock("nether_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.NETHER)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
-
-    public static final DeferredBlock<Block> SANDSTONE_HARDENED_BRICKS = registerBlock("sandstone_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.SAND)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
-
-    public static final DeferredBlock<Block> RED_SANDSTONE_HARDENED_BRICKS = registerBlock("red_sandstone_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_ORANGE)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
-
-    public static final DeferredBlock<Block> GRANITE_HARDENED_BRICKS = registerBlock("granite_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.DIRT)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
-
-    public static final DeferredBlock<Block> DIORITE_HARDENED_BRICKS = registerBlock("diorite_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.QUARTZ)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
-
-    public static final DeferredBlock<Block> ANDESITE_HARDENED_BRICKS = registerBlock("andesite_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.STONE)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
-
-    public static final DeferredBlock<Block> BASALT_HARDENED_BRICKS = registerBlock("basalt_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_BLACK)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
-
-    public static final DeferredBlock<Block> QUARTZ_HARDENED_BRICKS = registerBlock("quartz_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.QUARTZ)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
-
-    public static final DeferredBlock<Block> BLACK_QUARTZ_HARDENED_BRICKS = registerBlock("black_quartz_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_BLACK)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
-
-    public static final DeferredBlock<Block> NETHER_WART_HARDENED_BRICKS = registerBlock("nether_wart_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_RED)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
-
-    public static final DeferredBlock<Block> RED_NETHER_HARDENED_BRICKS = registerBlock("red_nether_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.NETHER)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
-
-    public static final DeferredBlock<Block> ICE_HARDENED_BRICKS = registerBlock("ice_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.ICE)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
-
-    public static final DeferredBlock<Block> SNOW_HARDENED_BRICKS = registerBlock("snow_hardened_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.SNOW)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(1.5f, 1200f)
-            ));
+    static {
+        for (HardenedBricksType type : HardenedBricksType.values()) {
+            HARDENED_BRICKS_SLABS.put(type,
+                    registerBlock(type.slabName(),
+                            () -> new SlabBlock(
+                                    BlockBehaviour.Properties.ofFullCopy(
+                                            HARDENED_BRICKS.get(type).get()
+                                    )
+                            )));
+        }
+    }
 
     //wooden bookshelf
     public static final DeferredBlock<BookshelfBlock> OAK_BOOKSHELF = registerBlock("oak_bookshelf",
@@ -640,5 +373,22 @@ public class BlockInit {
 
     public static void register( IEventBus eventBus) {
         BLOCKS.register(eventBus);
+    }
+
+    private static BlockBehaviour.Properties hardenedBrickProperties(MapColor color) {
+        return BlockBehaviour.Properties.of()
+                .mapColor(color)
+                .instrument(NoteBlockInstrument.BASEDRUM)
+                .requiresCorrectToolForDrops()
+                .strength(1.5f, 1200f);
+    }
+
+    private static BlockBehaviour.Properties framedLampProperties(MapColor color) {
+        return BlockBehaviour.Properties.of()
+                .mapColor(color)
+                .strength(0.3f, 6.0f)
+                .sound(SoundType.GLASS)
+                .lightLevel(state -> 15)
+                .isRedstoneConductor(BlockInit::never);
     }
 }

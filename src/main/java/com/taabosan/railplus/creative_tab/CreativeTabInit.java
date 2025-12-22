@@ -10,6 +10,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import static com.taabosan.railplus.block.BlockInit.*;
+
 public class CreativeTabInit {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, RailPlus.MOD_ID);
 
@@ -29,56 +31,11 @@ public class CreativeTabInit {
 
                 output.accept(BlockInit.INVISIBLE_BUTTON);
 
-                output.accept(BlockInit.WHITE_FRAMED_LAMP);
-                output.accept(BlockInit.ORANGE_FRAMED_LAMP);
-                output.accept(BlockInit.MAGENTA_FRAMED_LAMP);
-                output.accept(BlockInit.LIGHT_BLUE_FRAMED_LAMP);
-                output.accept(BlockInit.YELLOW_FRAMED_LAMP);
-                output.accept(BlockInit.LIME_FRAMED_LAMP);
-                output.accept(BlockInit.PINK_FRAMED_LAMP);
-                output.accept(BlockInit.GRAY_FRAMED_LAMP);
-                output.accept(BlockInit.LIGHT_GRAY_FRAMED_LAMP);
-                output.accept(BlockInit.CYAN_FRAMED_LAMP);
-                output.accept(BlockInit.PURPLE_FRAMED_LAMP);
-                output.accept(BlockInit.BLUE_FRAMED_LAMP);
-                output.accept(BlockInit.BROWN_FRAMED_LAMP);
-                output.accept(BlockInit.GREEN_FRAMED_LAMP);
-                output.accept(BlockInit.RED_FRAMED_LAMP);
-                output.accept(BlockInit.BLACK_FRAMED_LAMP);
+                FRAMED_LAMPS.values().forEach(output::accept);
+                FRAMED_LAMP_SLABS.values().forEach(output::accept);
 
-                output.accept(BlockInit.WHITE_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.ORANGE_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.MAGENTA_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.LIGHT_BLUE_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.YELLOW_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.LIME_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.PINK_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.GRAY_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.LIGHT_GRAY_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.CYAN_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.PURPLE_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.BLUE_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.BROWN_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.GREEN_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.RED_FRAMED_LAMP_SLAB);
-                output.accept(BlockInit.BLACK_FRAMED_LAMP_SLAB);
-
-                output.accept(BlockInit.STONE_HARDENED_BRICKS);
-                output.accept(BlockInit.COBBLESTONE_HARDENED_BRICKS);
-                output.accept(BlockInit.NETHERRACK_HARDENED_BRICKS);
-                output.accept(BlockInit.NETHER_HARDENED_BRICKS);
-                output.accept(BlockInit.SANDSTONE_HARDENED_BRICKS);
-                output.accept(BlockInit.RED_SANDSTONE_HARDENED_BRICKS);
-                output.accept(BlockInit.GRANITE_HARDENED_BRICKS);
-                output.accept(BlockInit.DIORITE_HARDENED_BRICKS);
-                output.accept(BlockInit.ANDESITE_HARDENED_BRICKS);
-                output.accept(BlockInit.BASALT_HARDENED_BRICKS);
-                output.accept(BlockInit.QUARTZ_HARDENED_BRICKS);
-                output.accept(BlockInit.BLACK_QUARTZ_HARDENED_BRICKS);
-                output.accept(BlockInit.NETHER_WART_HARDENED_BRICKS);
-                output.accept(BlockInit.RED_NETHER_HARDENED_BRICKS);
-                output.accept(BlockInit.ICE_HARDENED_BRICKS);
-                output.accept(BlockInit.SNOW_HARDENED_BRICKS);
+                HARDENED_BRICKS.values().forEach(output::accept);
+                HARDENED_BRICKS_SLABS.values().forEach(output::accept);
 
                 output.accept(BlockInit.OAK_BOOKSHELF);
                 output.accept(BlockInit.SPRUCE_BOOKSHELF);

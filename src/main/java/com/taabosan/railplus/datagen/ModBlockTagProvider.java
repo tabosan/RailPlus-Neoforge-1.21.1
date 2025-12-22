@@ -12,6 +12,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
+import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS;
+import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS_SLABS;
+
 public class ModBlockTagProvider extends BlockTagsProvider {
     public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, RailPlus.MOD_ID, existingFileHelper);
@@ -23,23 +26,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.ENDER_STEEL_BLOCK.get())
 
                 .add(BlockInit.INVISIBLE_BUTTON.get())
-
-                .add(BlockInit.STONE_HARDENED_BRICKS.get())
-                .add(BlockInit.COBBLESTONE_HARDENED_BRICKS.get())
-                .add(BlockInit.NETHERRACK_HARDENED_BRICKS.get())
-                .add(BlockInit.NETHER_HARDENED_BRICKS.get())
-                .add(BlockInit.SANDSTONE_HARDENED_BRICKS.get())
-                .add(BlockInit.RED_SANDSTONE_HARDENED_BRICKS.get())
-                .add(BlockInit.GRANITE_HARDENED_BRICKS.get())
-                .add(BlockInit.DIORITE_HARDENED_BRICKS.get())
-                .add(BlockInit.ANDESITE_HARDENED_BRICKS.get())
-                .add(BlockInit.BASALT_HARDENED_BRICKS.get())
-                .add(BlockInit.QUARTZ_HARDENED_BRICKS.get())
-                .add(BlockInit.BLACK_QUARTZ_HARDENED_BRICKS.get())
-                .add(BlockInit.NETHER_WART_HARDENED_BRICKS.get())
-                .add(BlockInit.RED_NETHER_HARDENED_BRICKS.get())
-                .add(BlockInit.ICE_HARDENED_BRICKS.get())
-                .add(BlockInit.SNOW_HARDENED_BRICKS.get())
 
                 .add(BlockInit.IRON_FLOOR.get())
                 .add(BlockInit.DIAMOND_FLOOR.get())
@@ -58,6 +44,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.YELLOW_RAILROAD_CROSSING_FENCE.get())
                 .add(BlockInit.WHITE_RAILROAD_CROSSING_FENCE.get())
         ;
+
+        HARDENED_BRICKS.values().forEach(block -> tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block.get()));
+        HARDENED_BRICKS_SLABS.values().forEach(block -> tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block.get()));
 
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(BlockInit.PAVING_GRAVEL.get())
@@ -87,24 +76,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.GOLD_BRICKS.get())
         ;
 
-        tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(BlockInit.STONE_HARDENED_BRICKS.get())
-                .add(BlockInit.COBBLESTONE_HARDENED_BRICKS.get())
-                .add(BlockInit.NETHERRACK_HARDENED_BRICKS.get())
-                .add(BlockInit.NETHER_HARDENED_BRICKS.get())
-                .add(BlockInit.SANDSTONE_HARDENED_BRICKS.get())
-                .add(BlockInit.RED_SANDSTONE_HARDENED_BRICKS.get())
-                .add(BlockInit.GRANITE_HARDENED_BRICKS.get())
-                .add(BlockInit.DIORITE_HARDENED_BRICKS.get())
-                .add(BlockInit.ANDESITE_HARDENED_BRICKS.get())
-                .add(BlockInit.BASALT_HARDENED_BRICKS.get())
-                .add(BlockInit.QUARTZ_HARDENED_BRICKS.get())
-                .add(BlockInit.BLACK_QUARTZ_HARDENED_BRICKS.get())
-                .add(BlockInit.NETHER_WART_HARDENED_BRICKS.get())
-                .add(BlockInit.RED_NETHER_HARDENED_BRICKS.get())
-                .add(BlockInit.ICE_HARDENED_BRICKS.get())
-                .add(BlockInit.SNOW_HARDENED_BRICKS.get())
-        ;
+        HARDENED_BRICKS.values().forEach(block -> tag(BlockTags.NEEDS_DIAMOND_TOOL).add(block.get()));
+        HARDENED_BRICKS_SLABS.values().forEach(block -> tag(BlockTags.NEEDS_DIAMOND_TOOL).add(block.get()));
+
+        HARDENED_BRICKS_SLABS.values().forEach(block -> tag(BlockTags.SLABS).add(block.get()));
 
         tag(BlockTags.BUTTONS).add(BlockInit.INVISIBLE_BUTTON.get());
 

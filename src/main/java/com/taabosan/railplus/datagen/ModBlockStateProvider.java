@@ -2,6 +2,8 @@ package com.taabosan.railplus.datagen;
 
 import com.taabosan.railplus.RailPlus;
 import com.taabosan.railplus.block.BlockInit;
+import com.taabosan.railplus.block.FramedLampColor;
+import com.taabosan.railplus.block.HardenedBricksType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.*;
@@ -9,6 +11,8 @@ import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+
+import static com.taabosan.railplus.block.BlockInit.*;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -21,56 +25,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         buttonBlockWithItem(BlockInit.INVISIBLE_BUTTON.get());
 
-        blockWithItem(BlockInit.WHITE_FRAMED_LAMP);
-        blockWithItem(BlockInit.ORANGE_FRAMED_LAMP);
-        blockWithItem(BlockInit.MAGENTA_FRAMED_LAMP);
-        blockWithItem(BlockInit.LIGHT_BLUE_FRAMED_LAMP);
-        blockWithItem(BlockInit.YELLOW_FRAMED_LAMP);
-        blockWithItem(BlockInit.LIME_FRAMED_LAMP);
-        blockWithItem(BlockInit.PINK_FRAMED_LAMP);
-        blockWithItem(BlockInit.GRAY_FRAMED_LAMP);
-        blockWithItem(BlockInit.LIGHT_GRAY_FRAMED_LAMP);
-        blockWithItem(BlockInit.CYAN_FRAMED_LAMP);
-        blockWithItem(BlockInit.PURPLE_FRAMED_LAMP);
-        blockWithItem(BlockInit.BLUE_FRAMED_LAMP);
-        blockWithItem(BlockInit.BROWN_FRAMED_LAMP);
-        blockWithItem(BlockInit.GREEN_FRAMED_LAMP);
-        blockWithItem(BlockInit.RED_FRAMED_LAMP);
-        blockWithItem(BlockInit.BLACK_FRAMED_LAMP);
+        for (FramedLampColor color : FramedLampColor.values()) {
+            blockWithItem(FRAMED_LAMPS.get(color));
+            slabBlockWithItem(FRAMED_LAMP_SLABS.get(color).get(), FRAMED_LAMPS.get(color).get());
+        }
 
-        slabBlockWithItem(BlockInit.WHITE_FRAMED_LAMP_SLAB.get(), BlockInit.WHITE_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.ORANGE_FRAMED_LAMP_SLAB.get(), BlockInit.ORANGE_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.MAGENTA_FRAMED_LAMP_SLAB.get(), BlockInit.MAGENTA_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.LIGHT_BLUE_FRAMED_LAMP_SLAB.get(), BlockInit.LIGHT_BLUE_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.YELLOW_FRAMED_LAMP_SLAB.get(), BlockInit.YELLOW_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.LIME_FRAMED_LAMP_SLAB.get(), BlockInit.LIME_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.PINK_FRAMED_LAMP_SLAB.get(), BlockInit.PINK_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.GRAY_FRAMED_LAMP_SLAB.get(), BlockInit.GRAY_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.LIGHT_GRAY_FRAMED_LAMP_SLAB.get(), BlockInit.LIGHT_GRAY_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.CYAN_FRAMED_LAMP_SLAB.get(), BlockInit.CYAN_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.PURPLE_FRAMED_LAMP_SLAB.get(), BlockInit.PURPLE_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.BLUE_FRAMED_LAMP_SLAB.get(), BlockInit.BLUE_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.BROWN_FRAMED_LAMP_SLAB.get(), BlockInit.BROWN_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.GREEN_FRAMED_LAMP_SLAB.get(), BlockInit.GREEN_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.RED_FRAMED_LAMP_SLAB.get(), BlockInit.RED_FRAMED_LAMP.get());
-        slabBlockWithItem(BlockInit.BLACK_FRAMED_LAMP_SLAB.get(), BlockInit.BLACK_FRAMED_LAMP.get());
-
-        blockWithItem(BlockInit.STONE_HARDENED_BRICKS);
-        blockWithItem(BlockInit.COBBLESTONE_HARDENED_BRICKS);
-        blockWithItem(BlockInit.NETHERRACK_HARDENED_BRICKS);
-        blockWithItem(BlockInit.NETHER_HARDENED_BRICKS);
-        blockWithItem(BlockInit.SANDSTONE_HARDENED_BRICKS);
-        blockWithItem(BlockInit.RED_SANDSTONE_HARDENED_BRICKS);
-        blockWithItem(BlockInit.GRANITE_HARDENED_BRICKS);
-        blockWithItem(BlockInit.DIORITE_HARDENED_BRICKS);
-        blockWithItem(BlockInit.ANDESITE_HARDENED_BRICKS);
-        blockWithItem(BlockInit.BASALT_HARDENED_BRICKS);
-        blockWithItem(BlockInit.QUARTZ_HARDENED_BRICKS);
-        blockWithItem(BlockInit.BLACK_QUARTZ_HARDENED_BRICKS);
-        blockWithItem(BlockInit.NETHER_WART_HARDENED_BRICKS);
-        blockWithItem(BlockInit.RED_NETHER_HARDENED_BRICKS);
-        blockWithItem(BlockInit.ICE_HARDENED_BRICKS);
-        blockWithItem(BlockInit.SNOW_HARDENED_BRICKS);
+        for (HardenedBricksType type : HardenedBricksType.values()) {
+            blockWithItem(HARDENED_BRICKS.get(type));
+            slabBlockWithItem(HARDENED_BRICKS_SLABS.get(type).get(), HARDENED_BRICKS.get(type).get());
+        }
 
         blockWithItem(BlockInit.IRON_FLOOR);
         blockWithItem(BlockInit.DIAMOND_FLOOR);

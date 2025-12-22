@@ -1,5 +1,5 @@
 {
-  "item.rail_plus.rusted_rail_": "Rusted Rail Scrap",
+  "item.rail_plus.rusted_rail": "Rusted Rail",
   "item.rail_plus.rusted_rail_bundle": "Rusted Rail Bundle",
   "item.rail_plus.rusted_rail_stack": "Rusted Rail Stack",
 
@@ -61,6 +61,23 @@
   "block.rail_plus.red_nether_hardened_bricks": "Red Nether Hardened Bricks",
   "block.rail_plus.ice_hardened_bricks": "Ice Hardened Bricks",
   "block.rail_plus.snow_hardened_bricks": "Snow Hardened Bricks",
+
+  "block.rail_plus.stone_hardened_bricks_slab": "Stone Hardened Bricks Slab",
+  "block.rail_plus.cobblestone_hardened_bricks_slab": "Cobblestone Hardened Bricks Slab",
+  "block.rail_plus.netherrack_hardened_bricks_slab": "Netherrack Hardened Bricks Slab",
+  "block.rail_plus.nether_hardened_bricks_slab": "Nether Hardened Bricks Slab",
+  "block.rail_plus.sandstone_hardened_bricks_slab": "Sandstone Hardened Bricks Slab",
+  "block.rail_plus.red_sandstone_hardened_bricks_slab": "Red Sandstone Hardened Bricks Slab",
+  "block.rail_plus.granite_hardened_bricks_slab": "Granite Hardened Bricks Slab",
+  "block.rail_plus.diorite_hardened_bricks_slab": "Diorite Hardened Bricks Slab",
+  "block.rail_plus.andesite_hardened_bricks_slab": "Andesite Hardened Bricks Slab",
+  "block.rail_plus.basalt_hardened_bricks_slab": "Basalt Hardened Bricks Slab",
+  "block.rail_plus.quartz_hardened_bricks_slab": "Quartz Hardened Bricks Slab",
+  "block.rail_plus.black_quartz_hardened_bricks_slab": "Black Quartz Hardened Bricks Slab",
+  "block.rail_plus.nether_wart_hardened_bricks_slab": "Nether Wart Hardened Bricks Slab",
+  "block.rail_plus.red_nether_hardened_bricks_slab": "Red Nether Hardened Bricks Slab",
+  "block.rail_plus.ice_hardened_bricks_slab": "Ice Hardened Bricks Slab",
+  "block.rail_plus.snow_hardened_bricks_slab": "Snow Hardened Bricks Slab",
 
   "block.rail_plus.oak_bookshelf": "Oak Bookshelf",
   "block.rail_plus.spruce_bookshelf": "Spruce Bookshelf",
