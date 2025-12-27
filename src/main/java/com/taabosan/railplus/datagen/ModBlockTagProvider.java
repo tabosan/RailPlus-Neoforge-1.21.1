@@ -35,7 +35,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.GOLD_BRICKS.get())
 
                 .add(BlockInit.STONE_PAVEMENT.get())
+                .add(BlockInit.BEDROCK_PAVEMENT.get())
                 .add(BlockInit.SANDSTONE_PAVEMENT.get())
+
+                .add(BlockInit.DITCH.get())
+
+                .add(BlockInit.STATION_EDGE.get())
 
                 .add(BlockInit.PAVING_STONE.get())
                 .add(BlockInit.POWERED_PAVING_STONE.get())
@@ -49,6 +54,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         HARDENED_BRICKS_SLABS.values().forEach(block -> tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block.get()));
 
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(BlockInit.WHITE_SAND.get())
                 .add(BlockInit.PAVING_GRAVEL.get())
                 .add(BlockInit.PAVING_GRAVEL_STAIRS.get())
                 .add(BlockInit.PAVING_GRAVEL_SLAB.get())

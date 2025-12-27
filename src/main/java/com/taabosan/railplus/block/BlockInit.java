@@ -3,6 +3,7 @@ package com.taabosan.railplus.block;
 import com.taabosan.railplus.RailPlus;
 import com.taabosan.railplus.item.ItemInit;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -59,18 +60,23 @@ public class BlockInit {
     public static final Map<FramedLampColor, DeferredBlock<Block>> FRAMED_LAMPS =
             new EnumMap<>(FramedLampColor.class);
 
+    public static final Map<FramedLampColor, DeferredBlock<SlabBlock>> FRAMED_LAMP_SLABS =
+            new EnumMap<>(FramedLampColor.class);
+
+    //hardened bricks
+    public static final Map<HardenedBricksType, DeferredBlock<Block>> HARDENED_BRICKS =
+            new EnumMap<>(HardenedBricksType.class);
+
+    public static final Map<HardenedBricksType, DeferredBlock<SlabBlock>> HARDENED_BRICKS_SLABS =
+            new EnumMap<>(HardenedBricksType.class);
+
     static {
         for (FramedLampColor color : FramedLampColor.values()) {
             FRAMED_LAMPS.put(color,
                     registerBlock(color.blockName(),
                             () -> new Block(framedLampProperties(color.mapColor))));
         }
-    }
 
-    public static final Map<FramedLampColor, DeferredBlock<SlabBlock>> FRAMED_LAMP_SLABS =
-            new EnumMap<>(FramedLampColor.class);
-
-    static {
         for (FramedLampColor color : FramedLampColor.values()) {
             FRAMED_LAMP_SLABS.put(color,
                     registerBlock(color.slabName(),
@@ -80,24 +86,13 @@ public class BlockInit {
                                     )
                             )));
         }
-    }
 
-    //hardened bricks
-    public static final Map<HardenedBricksType, DeferredBlock<Block>> HARDENED_BRICKS =
-            new EnumMap<>(HardenedBricksType.class);
-
-    static {
         for (HardenedBricksType type : HardenedBricksType.values()) {
             HARDENED_BRICKS.put(type,
                     registerBlock(type.blockName(),
                             () -> new Block(hardenedBrickProperties(type.mapColor))));
         }
-    }
 
-    public static final Map<HardenedBricksType, DeferredBlock<SlabBlock>> HARDENED_BRICKS_SLABS =
-            new EnumMap<>(HardenedBricksType.class);
-
-    static {
         for (HardenedBricksType type : HardenedBricksType.values()) {
             HARDENED_BRICKS_SLABS.put(type,
                     registerBlock(type.slabName(),
@@ -201,6 +196,14 @@ public class BlockInit {
                     .ignitedByLava()
             ));
 
+    public static final DeferredBlock<ColoredFallingBlock> WHITE_SAND = registerBlock("white_sand",
+            () -> new ColoredFallingBlock(new ColorRGBA(12895428), BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.SNARE)
+                    .strength(0.5F)
+                    .sound(SoundType.SAND)
+            ));
+
     public static final DeferredBlock<Block> IRON_FLOOR = registerBlock("iron_floor",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.METAL)
@@ -214,7 +217,7 @@ public class BlockInit {
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.DIAMOND)
                     .requiresCorrectToolForDrops()
-                    .strength(1.5f,9.0f)
+                    .strength(3.0f,9.0f)
                     .sound(SoundType.METAL)
             ));
 
@@ -222,7 +225,7 @@ public class BlockInit {
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.EMERALD)
                     .requiresCorrectToolForDrops()
-                    .strength(1.5f,9.0f)
+                    .strength(3.0f,9.0f)
                     .sound(SoundType.METAL)
             ));
 
@@ -253,6 +256,15 @@ public class BlockInit {
                     .sound(SoundType.STONE)
             ));
 
+    public static final DeferredBlock<Block> BEDROCK_PAVEMENT = registerBlock("bedrock_pavement",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5f,9.0f)
+                    .sound(SoundType.STONE)
+            ));
+
     public static final DeferredBlock<Block> SANDSTONE_PAVEMENT = registerBlock("sandstone_pavement",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.SAND)
@@ -260,6 +272,25 @@ public class BlockInit {
                     .requiresCorrectToolForDrops()
                     .strength(1.5f,9.0f)
                     .sound(SoundType.STONE)
+            ));
+
+    public static final DeferredBlock<RotatedPillarBlock> DITCH = registerBlock("ditch",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5f, 6.0f)
+                    .sound(SoundType.STONE)
+            ));
+
+    public static final DeferredBlock<StationEdgeBlock> STATION_EDGE = registerBlock("station_edge",
+            () -> new StationEdgeBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5f,6.0f)
+                    .sound(SoundType.STONE)
+                    .noOcclusion()
             ));
 
 
@@ -308,14 +339,14 @@ public class BlockInit {
     public  static final DeferredBlock<SlabRailBlock> SLAB_RAIL = registerBlock("slab_rail",
             () -> new SlabRailBlock(BlockBehaviour.Properties.of()
                     .noCollission()
-                    .strength(0.7F)
+                    .strength(0.7F,6.0F)
                     .sound(SoundType.METAL)
             ));
 
     public  static final DeferredBlock<PoweredSlabRailBlock> POWERED_SLAB_RAIL = registerBlock("powered_slab_rail",
             () -> new PoweredSlabRailBlock(BlockBehaviour.Properties.of()
                     .noCollission()
-                    .strength(0.7F)
+                    .strength(0.7F,6.0F)
                     .sound(SoundType.METAL)
             ,true
             ));
@@ -323,14 +354,14 @@ public class BlockInit {
     public static final DeferredBlock<DetectorSlabRailBlock> DETECTOR_SLAB_RAIL = registerBlock("detector_slab_rail",
             () -> new DetectorSlabRailBlock(BlockBehaviour.Properties.of()
                     .noCollission()
-                    .strength(0.7F)
+                    .strength(0.7F,6.0F)
                     .sound(SoundType.METAL)
             ));
 
     public static final DeferredBlock<PoweredSlabRailBlock> ACTIVATOR_SLAB_RAIL = registerBlock("activator_slab_rail",
             () -> new PoweredSlabRailBlock(BlockBehaviour.Properties.of()
                     .noCollission()
-                    .strength(0.7F)
+                    .strength(0.7F,6.0F)
                     .sound(SoundType.METAL)
             ));
 

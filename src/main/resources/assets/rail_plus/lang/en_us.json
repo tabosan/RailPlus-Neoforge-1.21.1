@@ -90,6 +90,8 @@
   "block.rail_plus.crimson_bookshelf": "Crimson Bookshelf",
   "block.rail_plus.warped_bookshelf": "Warped Bookshelf",
 
+  "block.rail_plus.white_sand": "White Sand",
+
   "block.rail_plus.iron_floor": "Iron Floor",
   "block.rail_plus.diamond_floor": "Diamond Floor",
   "block.rail_plus.emerald_floor": "Emerald Floor",
@@ -98,7 +100,12 @@
   "block.rail_plus.gold_bricks": "Gold Bricks",
 
   "block.rail_plus.stone_pavement": "Stone Pavement",
+  "block.rail_plus.bedrock_pavement": "Bedrock Pavement",
   "block.rail_plus.sandstone_pavement": "Sandstone Pavement",
+
+  "block.rail_plus.ditch": "Ditch",
+
+  "block.rail_plus.station_edge": "Station Edge",
 
   "block.rail_plus.paving_gravel": "Paving Gravel for Rails",
   "block.rail_plus.paving_gravel_stairs": "Paving Gravel Stairs for Rails",

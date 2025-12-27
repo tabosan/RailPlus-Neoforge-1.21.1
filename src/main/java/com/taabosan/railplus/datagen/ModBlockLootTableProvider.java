@@ -11,7 +11,10 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.Set;
 
-import static com.taabosan.railplus.block.BlockInit.*;
+import static com.taabosan.railplus.block.BlockInit.FRAMED_LAMPS;
+import static com.taabosan.railplus.block.BlockInit.FRAMED_LAMP_SLABS;
+import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS;
+import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS_SLABS;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
@@ -48,6 +51,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockInit.CRIMSON_BOOKSHELF.get());
         dropSelf(BlockInit.WARPED_BOOKSHELF.get());
 
+        dropSelf(BlockInit.WHITE_SAND.get());
+
         dropSelf(BlockInit.IRON_FLOOR.get());
         dropSelf(BlockInit.DIAMOND_FLOOR.get());
         dropSelf(BlockInit.EMERALD_FLOOR.get());
@@ -56,7 +61,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockInit.GOLD_BRICKS.get());
 
         dropSelf(BlockInit.STONE_PAVEMENT.get());
+        dropSelf(BlockInit.BEDROCK_PAVEMENT.get());
         dropSelf(BlockInit.SANDSTONE_PAVEMENT.get());
+
+        dropSelf(BlockInit.DITCH.get());
+
+        dropSelf(BlockInit.STATION_EDGE.get());
 
         dropSelf(BlockInit.PAVING_GRAVEL.get());
         dropSelf(BlockInit.PAVING_GRAVEL_STAIRS.get());

@@ -12,7 +12,10 @@ import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
-import static com.taabosan.railplus.block.BlockInit.*;
+import static com.taabosan.railplus.block.BlockInit.FRAMED_LAMPS;
+import static com.taabosan.railplus.block.BlockInit.FRAMED_LAMP_SLABS;
+import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS;
+import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS_SLABS;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -35,6 +38,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
             slabBlockWithItem(HARDENED_BRICKS_SLABS.get(type).get(), HARDENED_BRICKS.get(type).get());
         }
 
+        blockWithItem(BlockInit.WHITE_SAND);
+
         blockWithItem(BlockInit.IRON_FLOOR);
         blockWithItem(BlockInit.DIAMOND_FLOOR);
         blockWithItem(BlockInit.EMERALD_FLOOR);
@@ -43,7 +48,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(BlockInit.GOLD_BRICKS);
 
         pavementBlockWithItem(BlockInit.STONE_PAVEMENT.get());
+        pavementBlockWithItem(BlockInit.BEDROCK_PAVEMENT.get());
         pavementBlockWithItem(BlockInit.SANDSTONE_PAVEMENT.get());
+
+        rotatedPillarBlockWithItem(BlockInit.DITCH.get());
+
+        horizontalBlock(BlockInit.STATION_EDGE.get(), models().getExistingFile(modLoc("block/station_edge")));
+        blockItem(BlockInit.STATION_EDGE.get());
 
         blockWithItem(BlockInit.PAVING_GRAVEL);
         stairsBlockWithItem(BlockInit.PAVING_GRAVEL_STAIRS.get(), BlockInit.PAVING_GRAVEL.get());
@@ -67,7 +78,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(BlockInit.CRIMSON_BOOKSHELF.get());
         blockItem(BlockInit.WARPED_BOOKSHELF.get());
 
-
         blockItem(BlockInit.RED_CACTUS.get());
 
         fenceBlockWithItem(BlockInit.YELLOW_RAILROAD_CROSSING_FENCE.get());
@@ -87,6 +97,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(block, models().cubeColumn(getName(block), blockTexture(block), blockTexture(block).withSuffix("_top")));
     }
 
+    private void rotatedPillarBlockWithItem(Block block){
+        axisBlock((RotatedPillarBlock) block, blockTexture(block).withSuffix("_side"), blockTexture(block).withSuffix("_top"));
+        blockItem(block);
+    }
 
     private void stairsBlockWithItem(Block block, Block fullTextureBlock) {
         stairsBlock((StairBlock) block, blockTexture(fullTextureBlock));

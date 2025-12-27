@@ -1,0 +1,36 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "side": "rail_plus:block/station_edge_side",
+    "top": "rail_plus:block/station_edge_top",
+    "particle": "rail_plus:block/station_edge_side"
+  },
+  "elements": [
+    {
+      "name": "lower",
+      "from": [ 0, 0, 8 ],
+      "to":   [ 16, 8, 16 ],
+      "faces": {
+        "up":    { "texture": "#top" },
+        "down":  { "texture": "#side" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "east":  { "texture": "#side" },
+        "west":  { "texture": "#side" }
+      }
+    },
+    {
+      "name": "upper",
+      "from": [ 0, 8, 0 ],
+      "to":   [ 16, 16, 16 ],
+      "faces": {
+        "up":    { "texture": "#top" },
+        "down":  { "texture": "#side" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "east":  { "texture": "#side" },
+        "west":  { "texture": "#side" }
+      }
+    }
+  ]
+}

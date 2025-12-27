@@ -10,7 +10,10 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import static com.taabosan.railplus.block.BlockInit.*;
+import static com.taabosan.railplus.block.BlockInit.FRAMED_LAMPS;
+import static com.taabosan.railplus.block.BlockInit.FRAMED_LAMP_SLABS;
+import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS;
+import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS_SLABS;
 
 public class CreativeTabInit {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, RailPlus.MOD_ID);
@@ -48,6 +51,8 @@ public class CreativeTabInit {
                 output.accept(BlockInit.CRIMSON_BOOKSHELF);
                 output.accept(BlockInit.WARPED_BOOKSHELF);
 
+                output.accept(BlockInit.WHITE_SAND);
+
                 output.accept(BlockInit.IRON_FLOOR);
                 output.accept(BlockInit.DIAMOND_FLOOR);
                 output.accept(BlockInit.EMERALD_FLOOR);
@@ -56,7 +61,12 @@ public class CreativeTabInit {
                 output.accept(BlockInit.GOLD_BRICKS);
 
                 output.accept(BlockInit.STONE_PAVEMENT);
+                output.accept(BlockInit.BEDROCK_PAVEMENT);
                 output.accept(BlockInit.SANDSTONE_PAVEMENT);
+
+                output.accept(BlockInit.DITCH);
+
+                output.accept(BlockInit.STATION_EDGE);
 
                 output.accept(BlockInit.PAVING_GRAVEL);
                 output.accept(BlockInit.PAVING_GRAVEL_STAIRS);
