@@ -39,6 +39,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         }
 
         blockWithItem(BlockInit.WHITE_SAND);
+        blockWithItem(BlockInit.DARK_EARTHEN_WALL);
+        blockWithItem(BlockInit.BROWN_EARTHEN_WALL);
+        blockWithItem(BlockInit.LIGHT_EARTHEN_WALL);
+        blockWithItem(BlockInit.GRAVELLY_SOIL);
+
+        rotatedPillarBlockWithItem(BlockInit.SHIKKUI.get());
+        rotatedPillarBlockWithItem(BlockInit.TATAMI.get());
+        rotatedPillarBlockWithItem(BlockInit.GREEN_TATAMI.get());
+        rotatedPillarBlockWithItem(BlockInit.BROWN_TATAMI.get());
 
         blockWithItem(BlockInit.IRON_FLOOR);
         blockWithItem(BlockInit.DIAMOND_FLOOR);

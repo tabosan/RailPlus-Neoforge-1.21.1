@@ -52,6 +52,15 @@ public class CreativeTabInit {
                 output.accept(BlockInit.WARPED_BOOKSHELF);
 
                 output.accept(BlockInit.WHITE_SAND);
+                output.accept(BlockInit.DARK_EARTHEN_WALL);
+                output.accept(BlockInit.BROWN_EARTHEN_WALL);
+                output.accept(BlockInit.LIGHT_EARTHEN_WALL);
+                output.accept(BlockInit.GRAVELLY_SOIL);
+
+                output.accept(BlockInit.SHIKKUI);
+                output.accept(BlockInit.TATAMI);
+                output.accept(BlockInit.GREEN_TATAMI);
+                output.accept(BlockInit.BROWN_TATAMI);
 
                 output.accept(BlockInit.IRON_FLOOR);
                 output.accept(BlockInit.DIAMOND_FLOOR);

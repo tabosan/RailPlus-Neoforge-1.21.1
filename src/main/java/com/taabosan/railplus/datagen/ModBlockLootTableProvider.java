@@ -52,6 +52,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockInit.WARPED_BOOKSHELF.get());
 
         dropSelf(BlockInit.WHITE_SAND.get());
+        dropSelf(BlockInit.DARK_EARTHEN_WALL.get());
+        dropSelf(BlockInit.BROWN_EARTHEN_WALL.get());
+        dropSelf(BlockInit.LIGHT_EARTHEN_WALL.get());
+        dropSelf(BlockInit.GRAVELLY_SOIL.get());
+
+        dropSelf(BlockInit.SHIKKUI.get());
+        dropSelf(BlockInit.TATAMI.get());
+        dropSelf(BlockInit.GREEN_TATAMI.get());
+        dropSelf(BlockInit.BROWN_TATAMI.get());
 
         dropSelf(BlockInit.IRON_FLOOR.get());
         dropSelf(BlockInit.DIAMOND_FLOOR.get());
