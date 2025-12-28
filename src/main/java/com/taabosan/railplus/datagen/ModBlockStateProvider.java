@@ -38,6 +38,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
             slabBlockWithItem(HARDENED_BRICKS_SLABS.get(type).get(), HARDENED_BRICKS.get(type).get());
         }
 
+        horizontalBlockWithItem(BlockInit.OAK_BOOKSHELF.get());
+        horizontalBlockWithItem(BlockInit.SPRUCE_BOOKSHELF.get());
+        horizontalBlockWithItem(BlockInit.BIRCH_BOOKSHELF.get());
+        horizontalBlockWithItem(BlockInit.JUNGLE_BOOKSHELF.get());
+        horizontalBlockWithItem(BlockInit.ACACIA_BOOKSHELF.get());
+        horizontalBlockWithItem(BlockInit.CHERRY_BOOKSHELF.get());
+        horizontalBlockWithItem(BlockInit.DARK_OAK_BOOKSHELF.get());
+        horizontalBlockWithItem(BlockInit.MANGROVE_BOOKSHELF.get());
+        horizontalBlockWithItem(BlockInit.CRIMSON_BOOKSHELF.get());
+        horizontalBlockWithItem(BlockInit.WARPED_BOOKSHELF.get());
+
         blockWithItem(BlockInit.WHITE_SAND);
         blockWithItem(BlockInit.DARK_EARTHEN_WALL);
         blockWithItem(BlockInit.BROWN_EARTHEN_WALL);
@@ -62,8 +73,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         rotatedPillarBlockWithItem(BlockInit.DITCH.get());
 
-        horizontalBlock(BlockInit.STATION_EDGE.get(), models().getExistingFile(modLoc("block/station_edge")));
-        blockItem(BlockInit.STATION_EDGE.get());
+        horizontalBlockWithItem(BlockInit.STATION_EDGE.get());
 
         blockWithItem(BlockInit.PAVING_GRAVEL);
         stairsBlockWithItem(BlockInit.PAVING_GRAVEL_STAIRS.get(), BlockInit.PAVING_GRAVEL.get());
@@ -75,17 +85,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         stairsBlockWithItem(BlockInit.PAVING_STONE_STAIRS.get(), BlockInit.PAVING_STONE.get());
         slabBlockWithItem(BlockInit.PAVING_STONE_SLAB.get(), BlockInit.PAVING_STONE.get());
-
-        blockItem(BlockInit.OAK_BOOKSHELF.get());
-        blockItem(BlockInit.SPRUCE_BOOKSHELF.get());
-        blockItem(BlockInit.BIRCH_BOOKSHELF.get());
-        blockItem(BlockInit.JUNGLE_BOOKSHELF.get());
-        blockItem(BlockInit.ACACIA_BOOKSHELF.get());
-        blockItem(BlockInit.CHERRY_BOOKSHELF.get());
-        blockItem(BlockInit.DARK_OAK_BOOKSHELF.get());
-        blockItem(BlockInit.MANGROVE_BOOKSHELF.get());
-        blockItem(BlockInit.CRIMSON_BOOKSHELF.get());
-        blockItem(BlockInit.WARPED_BOOKSHELF.get());
 
         blockItem(BlockInit.RED_CACTUS.get());
 
@@ -100,6 +99,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockItem(Block block) {
         simpleBlockItem(block, new ModelFile.UncheckedModelFile(blockTexture(block)));
+    }
+
+    private void horizontalBlockWithItem(Block block){
+        horizontalBlock(block, models().getExistingFile(modLoc("block/" + getName(block))));
+        blockItem(block);
     }
 
     private void pavementBlockWithItem(Block block){
