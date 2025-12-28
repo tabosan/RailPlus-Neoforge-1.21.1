@@ -420,6 +420,39 @@ public class BlockInit {
                     .sound(SoundType.METAL)
             ));
 
+    public static final DeferredBlock<RustedRailBlock> SLIGHTLY_RUSTED_RAIL = registerBlock("slightly_rusted_rail",
+            () -> new RustedRailBlock(BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .strength(0.7F,6.0F)
+                    .sound(SoundType.METAL)
+            ,0.75F
+            ));
+
+    public static final DeferredBlock<RustedRailBlock> RUSTED_RAIL = registerBlock("rusted_rail",
+            () -> new RustedRailBlock(BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .strength(0.7F,6.0F)
+                    .sound(SoundType.METAL)
+                    ,0.5F
+            ));
+
+    public static final DeferredBlock<RustedRailBlock> HEAVILY_RUSTED_RAIL = registerBlock("heavily_rusted_rail",
+            () -> new RustedRailBlock(BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .strength(0.7F,6.0F)
+                    .sound(SoundType.METAL)
+                    ,0.25F
+            ));
+
+    public static final DeferredBlock<RustedRailBlock> RUINED_RAIL = registerBlock("ruined_rail",
+            () -> new RustedRailBlock(BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .strength(0.7F,6.0F)
+                    .sound(SoundType.METAL)
+                    ,0F
+            ));
+
+
     public static final DeferredBlock<RedCactusBlock> RED_CACTUS = registerBlock("red_cactus",
             () -> new RedCactusBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_RED)

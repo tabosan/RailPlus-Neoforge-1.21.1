@@ -90,6 +90,11 @@ public class CreativeTabInit {
                 output.accept(BlockInit.DETECTOR_SLAB_RAIL);
                 output.accept(BlockInit.ACTIVATOR_SLAB_RAIL);
 
+                output.accept(BlockInit.SLIGHTLY_RUSTED_RAIL);
+                output.accept(BlockInit.RUSTED_RAIL);
+                output.accept(BlockInit.HEAVILY_RUSTED_RAIL);
+                output.accept(BlockInit.RUINED_RAIL);
+
                 output.accept(BlockInit.RED_CACTUS);
 
                 output.accept(BlockInit.YELLOW_RAILROAD_CROSSING_FENCE);

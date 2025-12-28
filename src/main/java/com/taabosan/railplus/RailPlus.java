@@ -11,7 +11,6 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.client.ChunkRenderTypeSet;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -81,6 +80,10 @@ public class RailPlus {
             ItemBlockRenderTypes.setRenderLayer(BlockInit.POWERED_SLAB_RAIL.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlockInit.DETECTOR_SLAB_RAIL.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlockInit.ACTIVATOR_SLAB_RAIL.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(BlockInit.SLIGHTLY_RUSTED_RAIL.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(BlockInit.RUSTED_RAIL.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(BlockInit.HEAVILY_RUSTED_RAIL.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(BlockInit.RUINED_RAIL.get(), RenderType.cutout());
         }
     }
 }

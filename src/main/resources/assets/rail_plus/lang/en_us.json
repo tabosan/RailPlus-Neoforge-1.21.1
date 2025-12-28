@@ -129,6 +129,11 @@
   "block.rail_plus.detector_slab_rail": "Detector Slab Rail",
   "block.rail_plus.activator_slab_rail": "Activator Slab Rail",
 
+  "block.rail_plus.slightly_rusted_rail": "Rusted Rail",
+  "block.rail_plus.rusted_rail": "Rusted Rail",
+  "block.rail_plus.heavily_rusted_rail": "Rusted Rail",
+  "block.rail_plus.ruined_rail": "Ruined Rail",
+
   "block.rail_plus.red_cactus": "Red Cactus",
 
   "block.rail_plus.yellow_railroad_crossing_fence": "Yellow Railroad Crossing Fence",

@@ -3,11 +3,15 @@ package com.taabosan.railplus.datagen;
 import com.taabosan.railplus.block.BlockInit;
 import com.taabosan.railplus.block.FramedLampColor;
 import com.taabosan.railplus.block.HardenedBricksType;
+import com.taabosan.railplus.item.ItemInit;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 import java.util.Set;
 
@@ -92,6 +96,43 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockInit.POWERED_SLAB_RAIL.get());
         dropSelf(BlockInit.DETECTOR_SLAB_RAIL.get());
         dropSelf(BlockInit.ACTIVATOR_SLAB_RAIL.get());
+
+        add(BlockInit.SLIGHTLY_RUSTED_RAIL.get(),
+                createSilkTouchDispatchTable(
+                        BlockInit.SLIGHTLY_RUSTED_RAIL.get(),
+                        applyExplosionDecay(
+                                BlockInit.SLIGHTLY_RUSTED_RAIL.get(),
+                                LootItem.lootTableItem(ItemInit.RUSTED_TRACK.get())
+                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(4.0F, 5.0F)))
+                        )
+                )
+        );
+
+        add(BlockInit.RUSTED_RAIL.get(),
+                createSilkTouchDispatchTable(
+                        BlockInit.RUSTED_RAIL.get(),
+                        applyExplosionDecay(
+                                BlockInit.RUSTED_RAIL.get(),
+                                LootItem.lootTableItem(ItemInit.RUSTED_TRACK.get())
+                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 3.0F)))
+                        )
+                )
+        );
+
+        add(BlockInit.HEAVILY_RUSTED_RAIL.get(),
+                createSilkTouchDispatchTable(
+                        BlockInit.HEAVILY_RUSTED_RAIL.get(),
+                        applyExplosionDecay(
+                                BlockInit.HEAVILY_RUSTED_RAIL.get(),
+                                LootItem.lootTableItem(ItemInit.RUSTED_TRACK.get())
+                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(0F, 1.0F)))
+                        )
+                )
+        );
+
+        add(BlockInit.RUINED_RAIL.get(),
+                createSilkTouchOnlyTable(BlockInit.RUINED_RAIL.get())
+        );
 
         dropSelf(BlockInit.YELLOW_RAILROAD_CROSSING_FENCE.get());
         dropSelf(BlockInit.WHITE_RAILROAD_CROSSING_FENCE.get());

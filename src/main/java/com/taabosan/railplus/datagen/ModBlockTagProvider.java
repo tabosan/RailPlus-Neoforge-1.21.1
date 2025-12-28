@@ -46,6 +46,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.POWERED_PAVING_STONE.get())
                 .add(BlockInit.PAVING_STONE_STAIRS.get())
                 .add(BlockInit.PAVING_STONE_SLAB.get())
+
+                .add(BlockInit.SLAB_RAIL.get())
+                .add(BlockInit.POWERED_SLAB_RAIL.get())
+                .add(BlockInit.DETECTOR_SLAB_RAIL.get())
+                .add(BlockInit.ACTIVATOR_SLAB_RAIL.get())
+                .add(BlockInit.SLIGHTLY_RUSTED_RAIL.get())
+                .add(BlockInit.RUSTED_RAIL.get())
+                .add(BlockInit.HEAVILY_RUSTED_RAIL.get())
+                .add(BlockInit.RUINED_RAIL.get())
+
                 .add(BlockInit.YELLOW_RAILROAD_CROSSING_FENCE.get())
                 .add(BlockInit.WHITE_RAILROAD_CROSSING_FENCE.get())
         ;
@@ -94,6 +104,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.POWERED_SLAB_RAIL.get())
                 .add(BlockInit.DETECTOR_SLAB_RAIL.get())
                 .add(BlockInit.ACTIVATOR_SLAB_RAIL.get())
+                .add(BlockInit.SLIGHTLY_RUSTED_RAIL.get())
+                .add(BlockInit.RUSTED_RAIL.get())
+                .add(BlockInit.HEAVILY_RUSTED_RAIL.get())
+                .add(BlockInit.RUINED_RAIL.get())
         ;
 
         tag(TagInit.Blocks.SLAB_RAIL_PLACEABLE)
