@@ -9,13 +9,13 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ItemInit {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(RailPlus.MOD_ID);
 
-    public static final DeferredItem<Item> RUSTED_RAIL = ITEMS.registerItem("rusted_rail",
+    public static final DeferredItem<Item> RUSTED_TRACK = ITEMS.registerItem("rusted_track",
             Item::new, new Item.Properties());
 
-    public static final DeferredItem<Item> RUSTED_RAIL_BUNDLE = ITEMS.registerItem("rusted_rail_bundle",
+    public static final DeferredItem<Item> RUSTED_TRACK_BUNDLE = ITEMS.registerItem("rusted_track_bundle",
             Item::new, new Item.Properties());
 
-    public static final DeferredItem<Item> RUSTED_RAIL_STACK = ITEMS.registerItem("rusted_rail_stack",
+    public static final DeferredItem<Item> RUSTED_TRACK_STACK = ITEMS.registerItem("rusted_track_stack",
             Item::new, new Item.Properties());
 
     public static final DeferredItem<Item> ENDER_DUST = ITEMS.registerItem("ender_dust",

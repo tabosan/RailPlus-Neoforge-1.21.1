@@ -22,9 +22,9 @@ public class CreativeTabInit {
             .title(Component.translatable("itemGroup.rail_plus.rail_plus"))
             .icon(() -> ItemInit.ENDER_STEEL_INGOT.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(ItemInit.RUSTED_RAIL);
-                output.accept(ItemInit.RUSTED_RAIL_BUNDLE);
-                output.accept(ItemInit.RUSTED_RAIL_STACK);
+                output.accept(ItemInit.RUSTED_TRACK);
+                output.accept(ItemInit.RUSTED_TRACK_BUNDLE);
+                output.accept(ItemInit.RUSTED_TRACK_STACK);
 
                 output.accept(ItemInit.ENDER_DUST);
                 output.accept(ItemInit.ENDER_STEEL_INGOT);

@@ -1,7 +1,6 @@
 package com.taabosan.railplus.datagen;
 
 import com.taabosan.railplus.RailPlus;
-import com.taabosan.railplus.block.BlockInit;
 import com.taabosan.railplus.item.ItemInit;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -17,9 +16,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(ItemInit.RUSTED_RAIL.get());
-        basicItem(ItemInit.RUSTED_RAIL_BUNDLE.get());
-        basicItem(ItemInit.RUSTED_RAIL_STACK.get());
+        basicItem(ItemInit.RUSTED_TRACK.get());
+        basicItem(ItemInit.RUSTED_TRACK_BUNDLE.get());
+        basicItem(ItemInit.RUSTED_TRACK_STACK.get());
         basicItem(ItemInit.ENDER_DUST.get());
         basicItem(ItemInit.ENDER_STEEL_INGOT.get());
         basicItem(ItemInit.ENDER_PLATE.get());
