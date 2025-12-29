@@ -10,10 +10,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import static com.taabosan.railplus.block.BlockInit.FRAMED_LAMPS;
-import static com.taabosan.railplus.block.BlockInit.FRAMED_LAMP_SLABS;
-import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS;
-import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS_SLABS;
+import static com.taabosan.railplus.block.BlockInit.*;
 
 public class CreativeTabInit {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, RailPlus.MOD_ID);
@@ -33,6 +30,9 @@ public class CreativeTabInit {
                 output.accept(BlockInit.ENDER_STEEL_BLOCK);
 
                 output.accept(BlockInit.INVISIBLE_BUTTON);
+
+                output.accept(FLAT_LAMP);
+                output.accept(SQUARE_LAMP);
 
                 FRAMED_LAMPS.values().forEach(output::accept);
                 FRAMED_LAMP_SLABS.values().forEach(output::accept);

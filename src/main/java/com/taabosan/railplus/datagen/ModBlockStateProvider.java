@@ -38,6 +38,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
             slabBlockWithItem(HARDENED_BRICKS_SLABS.get(type).get(), HARDENED_BRICKS.get(type).get());
         }
 
+        simpleBlock(BlockInit.FLAT_LAMP.get(), models().getExistingFile(modLoc("block/flat_lamp")));
+        blockItem(BlockInit.FLAT_LAMP.get());
+
+        simpleBlock(BlockInit.SQUARE_LAMP.get(), models().getExistingFile(modLoc("block/square_lamp")));
+        blockItem(BlockInit.SQUARE_LAMP.get());
+
         horizontalBlockWithItem(BlockInit.OAK_BOOKSHELF.get());
         horizontalBlockWithItem(BlockInit.SPRUCE_BOOKSHELF.get());
         horizontalBlockWithItem(BlockInit.BIRCH_BOOKSHELF.get());

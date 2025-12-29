@@ -56,6 +56,24 @@ public class BlockInit {
                     .pushReaction(PushReaction.DESTROY)
             ));
 
+    public static  final DeferredBlock<FlatLampBlock> FLAT_LAMP = registerBlock("flat_lamp",
+            () -> new FlatLampBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW)
+                    .strength(0.3f, 6.0f)
+                    .sound(SoundType.GLASS)
+                    .lightLevel(state -> 15)
+                    .noOcclusion()
+            ));
+
+    public static  final DeferredBlock<SquareLampBlock> SQUARE_LAMP = registerBlock("square_lamp",
+            () -> new SquareLampBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW)
+                    .strength(0.3f, 6.0f)
+                    .sound(SoundType.GLASS)
+                    .lightLevel(state -> 15)
+                    .noOcclusion()
+            ));
+
     //framed lamps
     public static final Map<FramedLampColor, DeferredBlock<Block>> FRAMED_LAMPS =
             new EnumMap<>(FramedLampColor.class);
@@ -391,6 +409,7 @@ public class BlockInit {
     public static final DeferredBlock<SlabBlock> PAVING_STONE_SLAB = registerBlock("paving_stone_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(PAVING_STONE.get())));
 
+    //rails
     public  static final DeferredBlock<SlabRailBlock> SLAB_RAIL = registerBlock("slab_rail",
             () -> new SlabRailBlock(BlockBehaviour.Properties.of()
                     .noCollission()
@@ -462,7 +481,7 @@ public class BlockInit {
                     .pushReaction(PushReaction.DESTROY)
             ));
 
-    //crossing fence
+    //railroad crossing fence
     public static final DeferredBlock<FenceBlock> YELLOW_RAILROAD_CROSSING_FENCE = registerBlock("yellow_railroad_crossing_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_YELLOW)
@@ -507,7 +526,6 @@ public class BlockInit {
                 .mapColor(color)
                 .strength(0.3f, 6.0f)
                 .sound(SoundType.GLASS)
-                .lightLevel(state -> 15)
-                .isRedstoneConductor(BlockInit::never);
+                .lightLevel(state -> 15);
     }
 }

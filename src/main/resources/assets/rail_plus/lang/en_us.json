@@ -45,6 +45,9 @@
   "block.rail_plus.red_framed_lamp_slab": "Red Framed Lamp Slab",
   "block.rail_plus.black_framed_lamp_slab": "Black Framed Lamp Slab",
 
+  "block.rail_plus.flat_lamp": "Flat Lamp",
+  "block.rail_plus.square_lamp": "Square Lamp",
+
   "block.rail_plus.stone_hardened_bricks": "Stone Hardened Bricks",
   "block.rail_plus.cobblestone_hardened_bricks": "Cobblestone Hardened Bricks",
   "block.rail_plus.netherrack_hardened_bricks": "Netherrack Hardened Bricks",
@@ -129,9 +132,9 @@
   "block.rail_plus.detector_slab_rail": "Detector Slab Rail",
   "block.rail_plus.activator_slab_rail": "Activator Slab Rail",
 
-  "block.rail_plus.slightly_rusted_rail": "Rusted Rail",
+  "block.rail_plus.slightly_rusted_rail": "Slightly Rusted Rail",
   "block.rail_plus.rusted_rail": "Rusted Rail",
-  "block.rail_plus.heavily_rusted_rail": "Rusted Rail",
+  "block.rail_plus.heavily_rusted_rail": "Heavily Rusted Rail",
   "block.rail_plus.ruined_rail": "Ruined Rail",
 
   "block.rail_plus.red_cactus": "Red Cactus",

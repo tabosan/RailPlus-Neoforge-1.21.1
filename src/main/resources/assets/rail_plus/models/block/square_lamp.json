@@ -1,0 +1,23 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "top": "rail_plus:block/square_lamp",
+    "side": "rail_plus:block/square_lamp",
+    "bottom": "rail_plus:block/flat_lamp_side",
+    "particle": "rail_plus:block/square_lamp"
+  },
+  "elements": [
+    {
+      "from": [ 4, 0, 4 ],
+      "to":   [ 12, 12, 12 ],
+      "faces": {
+        "down":  { "texture": "#bottom" },
+        "up":    { "texture": "#top" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west":  { "texture": "#side" },
+        "east":  { "texture": "#side" }
+      }
+    }
+  ]
+}

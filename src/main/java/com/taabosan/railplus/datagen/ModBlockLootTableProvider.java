@@ -32,6 +32,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(BlockInit.INVISIBLE_BUTTON.get());
 
+        dropSelf(BlockInit.FLAT_LAMP.get());
+        dropSelf(BlockInit.SQUARE_LAMP.get());
+
         for (FramedLampColor color : FramedLampColor.values()) {
             dropSelf(FRAMED_LAMPS.get(color).get());
             add(FRAMED_LAMP_SLABS.get(color).get(),
