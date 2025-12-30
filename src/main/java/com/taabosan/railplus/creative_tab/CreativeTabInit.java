@@ -67,6 +67,15 @@ public class CreativeTabInit {
                 output.accept(BlockInit.WARPED_LADDER);
                 output.accept(BlockInit.IRON_LADDER);
 
+                output.accept(BlockInit.WHITE_VENDING_MACHINE);
+                output.accept(BlockInit.RED_VENDING_MACHINE);
+                output.accept(BlockInit.BLUE_VENDING_MACHINE);
+                output.accept(BlockInit.ORANGE_VENDING_MACHINE);
+                output.accept(BlockInit.GREEN_VENDING_MACHINE);
+                output.accept(BlockInit.LIME_VENDING_MACHINE);
+                output.accept(BlockInit.YELLOW_VENDING_MACHINE);
+                output.accept(BlockInit.LOCKER);
+
                 output.accept(BlockInit.WHITE_SAND);
                 output.accept(BlockInit.DARK_EARTHEN_WALL);
                 output.accept(BlockInit.BROWN_EARTHEN_WALL);

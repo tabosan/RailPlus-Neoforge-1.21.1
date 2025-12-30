@@ -26,6 +26,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
                 .add(BlockInit.IRON_LADDER.get())
 
+                .add(BlockInit.WHITE_VENDING_MACHINE.get())
+                .add(BlockInit.RED_VENDING_MACHINE.get())
+                .add(BlockInit.BLUE_VENDING_MACHINE.get())
+                .add(BlockInit.ORANGE_VENDING_MACHINE.get())
+                .add(BlockInit.GREEN_VENDING_MACHINE.get())
+                .add(BlockInit.LIME_VENDING_MACHINE.get())
+                .add(BlockInit.YELLOW_VENDING_MACHINE.get())
+                .add(BlockInit.LOCKER.get())
+
                 .add(BlockInit.IRON_FLOOR.get())
                 .add(BlockInit.DIAMOND_FLOOR.get())
                 .add(BlockInit.EMERALD_FLOOR.get())

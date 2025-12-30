@@ -334,6 +334,78 @@ public class BlockInit {
                     .noOcclusion()
             ));
 
+    public static final DeferredBlock<VendingMachineBlock> WHITE_VENDING_MACHINE = registerBlock("white_vending_machine",
+            () -> new VendingMachineBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F,6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<VendingMachineBlock> RED_VENDING_MACHINE = registerBlock("red_vending_machine",
+            () -> new VendingMachineBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_RED)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F,6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<VendingMachineBlock> BLUE_VENDING_MACHINE = registerBlock("blue_vending_machine",
+            () -> new VendingMachineBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLUE)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F,6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<VendingMachineBlock> ORANGE_VENDING_MACHINE = registerBlock("orange_vending_machine",
+            () -> new VendingMachineBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F,6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<VendingMachineBlock> GREEN_VENDING_MACHINE = registerBlock("green_vending_machine",
+            () -> new VendingMachineBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_GREEN)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F,6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<VendingMachineBlock> LIME_VENDING_MACHINE = registerBlock("lime_vending_machine",
+            () -> new VendingMachineBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_LIGHT_GREEN)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F,6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<VendingMachineBlock> YELLOW_VENDING_MACHINE = registerBlock("yellow_vending_machine",
+            () -> new VendingMachineBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F,6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<VendingMachineBlock> LOCKER = registerBlock("locker",
+            () -> new VendingMachineBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F,6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+            ));
+
     public static final DeferredBlock<ColoredFallingBlock> WHITE_SAND = registerBlock("white_sand",
             () -> new ColoredFallingBlock(new ColorRGBA(12895428), BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE)

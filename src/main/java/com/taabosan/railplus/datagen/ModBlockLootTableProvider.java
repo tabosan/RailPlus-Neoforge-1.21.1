@@ -66,6 +66,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockInit.WARPED_LADDER.get());
         dropSelf(BlockInit.IRON_LADDER.get());
 
+        add(BlockInit.WHITE_VENDING_MACHINE.get(), this::createDoorTable);
+        add(BlockInit.RED_VENDING_MACHINE.get(), this::createDoorTable);
+        add(BlockInit.BLUE_VENDING_MACHINE.get(), this::createDoorTable);
+        add(BlockInit.ORANGE_VENDING_MACHINE.get(), this::createDoorTable);
+        add(BlockInit.GREEN_VENDING_MACHINE.get(), this::createDoorTable);
+        add(BlockInit.LIME_VENDING_MACHINE.get(), this::createDoorTable);
+        add(BlockInit.YELLOW_VENDING_MACHINE.get(), this::createDoorTable);
+        add(BlockInit.LOCKER.get(), this::createDoorTable);
+
         dropSelf(BlockInit.WHITE_SAND.get());
         dropSelf(BlockInit.DARK_EARTHEN_WALL.get());
         dropSelf(BlockInit.BROWN_EARTHEN_WALL.get());

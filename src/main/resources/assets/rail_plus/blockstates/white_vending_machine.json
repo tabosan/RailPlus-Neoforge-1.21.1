@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "facing=north,half=lower": { "model": "rail_plus:block/white_vending_machine_bottom" },
+    "facing=north,half=upper": { "model": "rail_plus:block/white_vending_machine_top" },
+
+    "facing=east,half=lower":  { "model": "rail_plus:block/white_vending_machine_bottom", "y": 90 },
+    "facing=east,half=upper":  { "model": "rail_plus:block/white_vending_machine_top", "y": 90 },
+
+    "facing=south,half=lower": { "model": "rail_plus:block/white_vending_machine_bottom", "y": 180 },
+    "facing=south,half=upper": { "model": "rail_plus:block/white_vending_machine_top", "y": 180 },
+
+    "facing=west,half=lower":  { "model": "rail_plus:block/white_vending_machine_bottom", "y": 270 },
+    "facing=west,half=upper":  { "model": "rail_plus:block/white_vending_machine_top", "y": 270 }
+  }
+}

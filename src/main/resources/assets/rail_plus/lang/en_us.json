@@ -107,6 +107,15 @@
   "block.rail_plus.warped_ladder": "Warped Ladder",
   "block.rail_plus.iron_ladder": "Iron Ladder",
 
+  "block.rail_plus.white_vending_machine": "White Vending Machine",
+  "block.rail_plus.red_vending_machine": "Red Vending Machine",
+  "block.rail_plus.blue_vending_machine": "Blue Vending Machine",
+  "block.rail_plus.orange_vending_machine": "Orange Vending Machine",
+  "block.rail_plus.green_vending_machine": "Green Vending Machine",
+  "block.rail_plus.lime_vending_machine": "Lime Vending Machine",
+  "block.rail_plus.yellow_vending_machine": "Yellow Vending Machine",
+  "block.rail_plus.locker": "Locker",
+
   "block.rail_plus.white_sand": "White Sand",
   "block.rail_plus.dark_earthen_wall": "Dark Earthen Wall",
   "block.rail_plus.brown_earthen_wall": "Brown Earthen Wall",
