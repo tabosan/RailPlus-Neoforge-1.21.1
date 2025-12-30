@@ -1,0 +1,7 @@
+{
+  "parent": "rail_plus:block/ladders",
+  "textures": {
+    "all": "block/oak_planks",
+    "particle": "block/oak_planks"
+  }
+}

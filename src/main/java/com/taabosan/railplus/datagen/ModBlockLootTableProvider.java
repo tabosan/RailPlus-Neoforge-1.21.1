@@ -15,11 +15,6 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 import java.util.Set;
 
-import static com.taabosan.railplus.block.BlockInit.FRAMED_LAMPS;
-import static com.taabosan.railplus.block.BlockInit.FRAMED_LAMP_SLABS;
-import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS;
-import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS_SLABS;
-
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     protected ModBlockLootTableProvider(HolderLookup.Provider registries) {
@@ -36,15 +31,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockInit.SQUARE_LAMP.get());
 
         for (FramedLampColor color : FramedLampColor.values()) {
-            dropSelf(FRAMED_LAMPS.get(color).get());
-            add(FRAMED_LAMP_SLABS.get(color).get(),
-                    block -> createSlabItemTable(FRAMED_LAMP_SLABS.get(color).get()));
+            dropSelf(BlockInit.FRAMED_LAMPS.get(color).get());
+            add(BlockInit.FRAMED_LAMP_SLABS.get(color).get(),
+                    block -> createSlabItemTable(BlockInit.FRAMED_LAMP_SLABS.get(color).get()));
         }
 
         for (HardenedBricksType type : HardenedBricksType.values()) {
-            dropSelf(HARDENED_BRICKS.get(type).get());
-            add(HARDENED_BRICKS_SLABS.get(type).get(),
-                    block -> createSlabItemTable(HARDENED_BRICKS_SLABS.get(type).get()));
+            dropSelf(BlockInit.HARDENED_BRICKS.get(type).get());
+            add(BlockInit.HARDENED_BRICKS_SLABS.get(type).get(),
+                    block -> createSlabItemTable(BlockInit.HARDENED_BRICKS_SLABS.get(type).get()));
         }
 
         dropSelf(BlockInit.OAK_BOOKSHELF.get());
@@ -57,6 +52,19 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockInit.MANGROVE_BOOKSHELF.get());
         dropSelf(BlockInit.CRIMSON_BOOKSHELF.get());
         dropSelf(BlockInit.WARPED_BOOKSHELF.get());
+
+        dropSelf(BlockInit.OAK_LADDER.get());
+        dropSelf(BlockInit.SPRUCE_LADDER.get());
+        dropSelf(BlockInit.BIRCH_LADDER.get());
+        dropSelf(BlockInit.JUNGLE_LADDER.get());
+        dropSelf(BlockInit.ACACIA_LADDER.get());
+        dropSelf(BlockInit.CHERRY_LADDER.get());
+        dropSelf(BlockInit.DARK_OAK_LADDER.get());
+        dropSelf(BlockInit.MANGROVE_LADDER.get());
+        dropSelf(BlockInit.BAMBOO_LADDER.get());
+        dropSelf(BlockInit.CRIMSON_LADDER.get());
+        dropSelf(BlockInit.WARPED_LADDER.get());
+        dropSelf(BlockInit.IRON_LADDER.get());
 
         dropSelf(BlockInit.WHITE_SAND.get());
         dropSelf(BlockInit.DARK_EARTHEN_WALL.get());

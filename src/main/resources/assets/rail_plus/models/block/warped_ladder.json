@@ -1,0 +1,7 @@
+{
+  "parent": "rail_plus:block/ladders",
+  "textures": {
+    "all": "block/warped_planks",
+    "particle": "block/warped_planks"
+  }
+}

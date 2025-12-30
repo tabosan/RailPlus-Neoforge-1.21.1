@@ -161,7 +161,7 @@ public class BlockInit {
 
     public static final DeferredBlock<BookshelfBlock> ACACIA_BOOKSHELF = registerBlock("acacia_bookshelf",
             () -> new BookshelfBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.DIRT)
+                    .mapColor(MapColor.COLOR_ORANGE)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(1.5F,6.0f)
                     .sound(SoundType.WOOD)
@@ -170,7 +170,7 @@ public class BlockInit {
 
     public static final DeferredBlock<BookshelfBlock> CHERRY_BOOKSHELF = registerBlock("cherry_bookshelf",
             () -> new BookshelfBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.DIRT)
+                    .mapColor(MapColor.TERRACOTTA_WHITE)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(1.5F,6.0f)
                     .sound(SoundType.WOOD)
@@ -179,7 +179,7 @@ public class BlockInit {
 
     public static final DeferredBlock<BookshelfBlock> DARK_OAK_BOOKSHELF = registerBlock("dark_oak_bookshelf",
             () -> new BookshelfBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.DIRT)
+                    .mapColor(MapColor.COLOR_BROWN)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(1.5F,6.0f)
                     .sound(SoundType.WOOD)
@@ -188,7 +188,7 @@ public class BlockInit {
 
     public static final DeferredBlock<BookshelfBlock> MANGROVE_BOOKSHELF = registerBlock("mangrove_bookshelf",
             () -> new BookshelfBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.DIRT)
+                    .mapColor(MapColor.COLOR_RED)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(1.5F,6.0f)
                     .sound(SoundType.WOOD)
@@ -197,7 +197,7 @@ public class BlockInit {
 
     public static final DeferredBlock<BookshelfBlock> CRIMSON_BOOKSHELF = registerBlock("crimson_bookshelf",
             () -> new BookshelfBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.DIRT)
+                    .mapColor(MapColor.CRIMSON_STEM)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(1.5F,6.0f)
                     .sound(SoundType.WOOD)
@@ -206,11 +206,132 @@ public class BlockInit {
 
     public static final DeferredBlock<BookshelfBlock> WARPED_BOOKSHELF = registerBlock("warped_bookshelf",
             () -> new BookshelfBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.DIRT)
+                    .mapColor(MapColor.WARPED_STEM)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(1.5F,6.0f)
                     .sound(SoundType.WOOD)
                     .ignitedByLava()
+            ));
+
+    //ladders
+    public static final DeferredBlock<ModLadderBlock> OAK_LADDER = registerBlock("oak_ladder",
+            () -> new ModLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F,3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<ModLadderBlock> SPRUCE_LADDER = registerBlock("spruce_ladder",
+            () -> new ModLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PODZOL)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F,3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<ModLadderBlock> BIRCH_LADDER = registerBlock("birch_ladder",
+            () -> new ModLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F,3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<ModLadderBlock> JUNGLE_LADDER = registerBlock("jungle_ladder",
+            () -> new ModLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.DIRT)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F,3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<ModLadderBlock> ACACIA_LADDER = registerBlock("acacia_ladder",
+            () -> new ModLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F,3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<ModLadderBlock> CHERRY_LADDER = registerBlock("cherry_ladder",
+            () -> new ModLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F,3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<ModLadderBlock> DARK_OAK_LADDER = registerBlock("dark_oak_ladder",
+            () -> new ModLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BROWN)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F,3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<ModLadderBlock> MANGROVE_LADDER = registerBlock("mangrove_ladder",
+            () -> new ModLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F,3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<ModLadderBlock> BAMBOO_LADDER = registerBlock("bamboo_ladder",
+            () -> new ModLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F,3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<ModLadderBlock> CRIMSON_LADDER = registerBlock("crimson_ladder",
+            () -> new ModLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.CRIMSON_STEM)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F,3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<ModLadderBlock> WARPED_LADDER = registerBlock("warped_ladder",
+            () -> new ModLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WARPED_STEM)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F,3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<ModLadderBlock> IRON_LADDER = registerBlock("iron_ladder",
+            () -> new ModLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
+                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F,6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
             ));
 
     public static final DeferredBlock<ColoredFallingBlock> WHITE_SAND = registerBlock("white_sand",

@@ -12,9 +12,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
-import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS;
-import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS_SLABS;
-
 public class ModBlockTagProvider extends BlockTagsProvider {
     public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, RailPlus.MOD_ID, existingFileHelper);
@@ -26,6 +23,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.ENDER_STEEL_BLOCK.get())
 
                 .add(BlockInit.INVISIBLE_BUTTON.get())
+
+                .add(BlockInit.IRON_LADDER.get())
 
                 .add(BlockInit.IRON_FLOOR.get())
                 .add(BlockInit.DIAMOND_FLOOR.get())
@@ -60,8 +59,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.WHITE_RAILROAD_CROSSING_FENCE.get())
         ;
 
-        HARDENED_BRICKS.values().forEach(block -> tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block.get()));
-        HARDENED_BRICKS_SLABS.values().forEach(block -> tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block.get()));
+        BlockInit.HARDENED_BRICKS.values().forEach(block -> tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block.get()));
+        BlockInit.HARDENED_BRICKS_SLABS.values().forEach(block -> tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block.get()));
 
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(BlockInit.WHITE_SAND.get())
@@ -81,6 +80,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.MANGROVE_BOOKSHELF.get())
                 .add(BlockInit.CRIMSON_BOOKSHELF.get())
                 .add(BlockInit.WARPED_BOOKSHELF.get())
+
+                .add(BlockInit.OAK_LADDER.get())
+                .add(BlockInit.SPRUCE_LADDER.get())
+                .add(BlockInit.BIRCH_LADDER.get())
+                .add(BlockInit.JUNGLE_LADDER.get())
+                .add(BlockInit.ACACIA_LADDER.get())
+                .add(BlockInit.CHERRY_LADDER.get())
+                .add(BlockInit.DARK_OAK_LADDER.get())
+                .add(BlockInit.MANGROVE_LADDER.get())
+                .add(BlockInit.BAMBOO_LADDER.get())
+                .add(BlockInit.CRIMSON_LADDER.get())
+                .add(BlockInit.WARPED_LADDER.get())
         ;
 
         tag(BlockTags.NEEDS_STONE_TOOL)
@@ -92,10 +103,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.GOLD_BRICKS.get())
         ;
 
-        HARDENED_BRICKS.values().forEach(block -> tag(BlockTags.NEEDS_DIAMOND_TOOL).add(block.get()));
-        HARDENED_BRICKS_SLABS.values().forEach(block -> tag(BlockTags.NEEDS_DIAMOND_TOOL).add(block.get()));
+        BlockInit.HARDENED_BRICKS.values().forEach(block -> tag(BlockTags.NEEDS_DIAMOND_TOOL).add(block.get()));
+        BlockInit.HARDENED_BRICKS_SLABS.values().forEach(block -> tag(BlockTags.NEEDS_DIAMOND_TOOL).add(block.get()));
 
-        HARDENED_BRICKS_SLABS.values().forEach(block -> tag(BlockTags.SLABS).add(block.get()));
+        BlockInit.HARDENED_BRICKS_SLABS.values().forEach(block -> tag(BlockTags.SLABS).add(block.get()));
 
         tag(BlockTags.BUTTONS).add(BlockInit.INVISIBLE_BUTTON.get());
 
@@ -122,7 +133,37 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.FENCES)
                 .add(BlockInit.YELLOW_RAILROAD_CROSSING_FENCE.get())
-                .add(BlockInit.WHITE_RAILROAD_CROSSING_FENCE.get());
+                .add(BlockInit.WHITE_RAILROAD_CROSSING_FENCE.get())
+        ;
+
+        tag(BlockTags.CLIMBABLE)
+                .add(BlockInit.OAK_LADDER.get())
+                .add(BlockInit.SPRUCE_LADDER.get())
+                .add(BlockInit.BIRCH_LADDER.get())
+                .add(BlockInit.JUNGLE_LADDER.get())
+                .add(BlockInit.ACACIA_LADDER.get())
+                .add(BlockInit.CHERRY_LADDER.get())
+                .add(BlockInit.DARK_OAK_LADDER.get())
+                .add(BlockInit.MANGROVE_LADDER.get())
+                .add(BlockInit.BAMBOO_LADDER.get())
+                .add(BlockInit.CRIMSON_LADDER.get())
+                .add(BlockInit.WARPED_LADDER.get())
+                .add(BlockInit.IRON_LADDER.get())
+        ;
+
+        tag(BlockTags.FALL_DAMAGE_RESETTING)
+                .add(BlockInit.OAK_LADDER.get())
+                .add(BlockInit.SPRUCE_LADDER.get())
+                .add(BlockInit.BIRCH_LADDER.get())
+                .add(BlockInit.JUNGLE_LADDER.get())
+                .add(BlockInit.ACACIA_LADDER.get())
+                .add(BlockInit.CHERRY_LADDER.get())
+                .add(BlockInit.DARK_OAK_LADDER.get())
+                .add(BlockInit.MANGROVE_LADDER.get())
+                .add(BlockInit.BAMBOO_LADDER.get())
+                .add(BlockInit.CRIMSON_LADDER.get())
+                .add(BlockInit.WARPED_LADDER.get())
+                .add(BlockInit.IRON_LADDER.get())
         ;
     }
 }

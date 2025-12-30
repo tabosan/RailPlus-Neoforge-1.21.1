@@ -12,11 +12,6 @@ import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
-import static com.taabosan.railplus.block.BlockInit.FRAMED_LAMPS;
-import static com.taabosan.railplus.block.BlockInit.FRAMED_LAMP_SLABS;
-import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS;
-import static com.taabosan.railplus.block.BlockInit.HARDENED_BRICKS_SLABS;
-
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, RailPlus.MOD_ID, exFileHelper);
@@ -29,13 +24,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         buttonBlockWithItem(BlockInit.INVISIBLE_BUTTON.get());
 
         for (FramedLampColor color : FramedLampColor.values()) {
-            blockWithItem(FRAMED_LAMPS.get(color));
-            slabBlockWithItem(FRAMED_LAMP_SLABS.get(color).get(), FRAMED_LAMPS.get(color).get());
+            blockWithItem(BlockInit.FRAMED_LAMPS.get(color));
+            slabBlockWithItem(BlockInit.FRAMED_LAMP_SLABS.get(color).get(), BlockInit.FRAMED_LAMPS.get(color).get());
         }
 
         for (HardenedBricksType type : HardenedBricksType.values()) {
-            blockWithItem(HARDENED_BRICKS.get(type));
-            slabBlockWithItem(HARDENED_BRICKS_SLABS.get(type).get(), HARDENED_BRICKS.get(type).get());
+            blockWithItem(BlockInit.HARDENED_BRICKS.get(type));
+            slabBlockWithItem(BlockInit.HARDENED_BRICKS_SLABS.get(type).get(), BlockInit.HARDENED_BRICKS.get(type).get());
         }
 
         blockItem(BlockInit.FLAT_LAMP.get());
@@ -52,6 +47,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlockWithItem(BlockInit.MANGROVE_BOOKSHELF.get());
         horizontalBlockWithItem(BlockInit.CRIMSON_BOOKSHELF.get());
         horizontalBlockWithItem(BlockInit.WARPED_BOOKSHELF.get());
+
+        horizontalBlockWithItem(BlockInit.OAK_LADDER.get());
+        horizontalBlockWithItem(BlockInit.SPRUCE_LADDER.get());
+        horizontalBlockWithItem(BlockInit.BIRCH_LADDER.get());
+        horizontalBlockWithItem(BlockInit.JUNGLE_LADDER.get());
+        horizontalBlockWithItem(BlockInit.ACACIA_LADDER.get());
+        horizontalBlockWithItem(BlockInit.CHERRY_LADDER.get());
+        horizontalBlockWithItem(BlockInit.DARK_OAK_LADDER.get());
+        horizontalBlockWithItem(BlockInit.MANGROVE_LADDER.get());
+        horizontalBlockWithItem(BlockInit.BAMBOO_LADDER.get());
+        horizontalBlockWithItem(BlockInit.CRIMSON_LADDER.get());
+        horizontalBlockWithItem(BlockInit.WARPED_LADDER.get());
+        horizontalBlockWithItem(BlockInit.IRON_LADDER.get());
 
         blockWithItem(BlockInit.WHITE_SAND);
         blockWithItem(BlockInit.DARK_EARTHEN_WALL);
