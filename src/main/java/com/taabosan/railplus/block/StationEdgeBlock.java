@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -17,7 +16,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class StationEdgeBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<StationEdgeBlock> CODEC = simpleCodec(StationEdgeBlock::new);
-    public static final DirectionProperty FACING;
 
     public MapCodec<? extends StationEdgeBlock> codec() {return CODEC;}
 
@@ -63,9 +61,5 @@ public class StationEdgeBlock extends HorizontalDirectionalBlock {
             case EAST -> SHAPE_EAST;
             default -> SHAPE_NORTH;
         };
-    }
-
-    static {
-        FACING = HorizontalDirectionalBlock.FACING;
     }
 }

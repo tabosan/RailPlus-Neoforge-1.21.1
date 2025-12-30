@@ -7,12 +7,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 
 public class BookshelfBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<BookshelfBlock> CODEC = simpleCodec(BookshelfBlock::new);
-    public static final DirectionProperty FACING;
 
     public MapCodec<? extends BookshelfBlock> codec() {return CODEC;}
 
@@ -27,9 +25,5 @@ public class BookshelfBlock extends HorizontalDirectionalBlock {
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(new Property[]{FACING});
-    }
-
-    static {
-        FACING = HorizontalDirectionalBlock.FACING;
     }
 }
