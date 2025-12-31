@@ -6,6 +6,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -55,6 +56,10 @@ public class SquareLampBlock extends FaceAttachedHorizontalDirectionalBlock impl
                 default -> FLOOR;
             };
         };
+    }
+
+    protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        return true;
     }
 
     @Override
