@@ -64,6 +64,7 @@ public class CreativeTabInit {
                 output.accept(BlockInit.CHERRY_BOOKSHELF);
                 output.accept(BlockInit.DARK_OAK_BOOKSHELF);
                 output.accept(BlockInit.MANGROVE_BOOKSHELF);
+                output.accept(BlockInit.BAMBOO_BOOKSHELF);
                 output.accept(BlockInit.CRIMSON_BOOKSHELF);
                 output.accept(BlockInit.WARPED_BOOKSHELF);
 
@@ -90,26 +91,45 @@ public class CreativeTabInit {
                 output.accept(BlockInit.LOCKER);
 
                 output.accept(BlockInit.WHITE_SAND);
+                output.accept(BlockInit.WHITE_SAND_SLAB);
+
                 output.accept(BlockInit.DARK_EARTHEN_WALL);
+                output.accept(BlockInit.DARK_EARTHEN_WALL_SLAB);
+
                 output.accept(BlockInit.BROWN_EARTHEN_WALL);
+                output.accept(BlockInit.BROWN_EARTHEN_WALL_SLAB);
+
                 output.accept(BlockInit.LIGHT_EARTHEN_WALL);
+                output.accept(BlockInit.LIGHT_EARTHEN_WALL_SLAB);
+
                 output.accept(BlockInit.GRAVELLY_SOIL);
+                output.accept(BlockInit.GRAVELLY_SOIL_SLAB);
+
+                output.accept(BlockInit.IRON_FLOOR);
+                output.accept(BlockInit.IRON_FLOOR_SLAB);
+
+                output.accept(BlockInit.DIAMOND_FLOOR);
+                output.accept(BlockInit.EMERALD_FLOOR);
+
+                output.accept(BlockInit.IRON_BRICKS);
+                output.accept(BlockInit.IRON_BRICKS_SLAB);
+
+                output.accept(BlockInit.GOLD_BRICKS);
+                output.accept(BlockInit.GOLD_BRICKS_SLAB);
+
+                output.accept(BlockInit.STONE_PAVEMENT);
+                output.accept(BlockInit.STONE_PAVEMENT_SLAB);
+
+                output.accept(BlockInit.BEDROCK_PAVEMENT);
+                output.accept(BlockInit.BEDROCK_PAVEMENT_SLAB);
+
+                output.accept(BlockInit.SANDSTONE_PAVEMENT);
+                output.accept(BlockInit.SANDSTONE_PAVEMENT_SLAB);
 
                 output.accept(BlockInit.SHIKKUI);
                 output.accept(BlockInit.TATAMI);
                 output.accept(BlockInit.GREEN_TATAMI);
                 output.accept(BlockInit.BROWN_TATAMI);
-
-                output.accept(BlockInit.IRON_FLOOR);
-                output.accept(BlockInit.DIAMOND_FLOOR);
-                output.accept(BlockInit.EMERALD_FLOOR);
-
-                output.accept(BlockInit.IRON_BRICKS);
-                output.accept(BlockInit.GOLD_BRICKS);
-
-                output.accept(BlockInit.STONE_PAVEMENT);
-                output.accept(BlockInit.BEDROCK_PAVEMENT);
-                output.accept(BlockInit.SANDSTONE_PAVEMENT);
 
                 output.accept(BlockInit.DITCH);
 

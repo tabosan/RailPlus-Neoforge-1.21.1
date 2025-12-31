@@ -51,13 +51,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.IRON_FLOOR.get())
                 .add(BlockInit.DIAMOND_FLOOR.get())
                 .add(BlockInit.EMERALD_FLOOR.get())
-
                 .add(BlockInit.IRON_BRICKS.get())
                 .add(BlockInit.GOLD_BRICKS.get())
-
                 .add(BlockInit.STONE_PAVEMENT.get())
                 .add(BlockInit.BEDROCK_PAVEMENT.get())
                 .add(BlockInit.SANDSTONE_PAVEMENT.get())
+
+                .add(BlockInit.IRON_FLOOR_SLAB.get())
+                .add(BlockInit.IRON_BRICKS_SLAB.get())
+                .add(BlockInit.GOLD_BRICKS_SLAB.get())
+                .add(BlockInit.STONE_PAVEMENT_SLAB.get())
+                .add(BlockInit.BEDROCK_PAVEMENT_SLAB.get())
+                .add(BlockInit.SANDSTONE_PAVEMENT_SLAB.get())
 
                 .add(BlockInit.DITCH.get())
 
@@ -86,6 +91,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(BlockInit.WHITE_SAND.get())
+                .add(BlockInit.DARK_EARTHEN_WALL.get())
+                .add(BlockInit.BROWN_EARTHEN_WALL.get())
+                .add(BlockInit.LIGHT_EARTHEN_WALL_SLAB.get())
+                .add(BlockInit.GRAVELLY_SOIL.get())
+
+                .add(BlockInit.WHITE_SAND_SLAB.get())
+                .add(BlockInit.DARK_EARTHEN_WALL_SLAB.get())
+                .add(BlockInit.BROWN_EARTHEN_WALL_SLAB.get())
+                .add(BlockInit.LIGHT_EARTHEN_WALL_SLAB.get())
+                .add(BlockInit.GRAVELLY_SOIL_SLAB.get())
+
                 .add(BlockInit.PAVING_GRAVEL.get())
                 .add(BlockInit.PAVING_GRAVEL_STAIRS.get())
                 .add(BlockInit.PAVING_GRAVEL_SLAB.get())
@@ -100,6 +116,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockInit.CHERRY_BOOKSHELF.get())
                 .add(BlockInit.DARK_OAK_BOOKSHELF.get())
                 .add(BlockInit.MANGROVE_BOOKSHELF.get())
+                .add(BlockInit.BAMBOO_BOOKSHELF.get())
                 .add(BlockInit.CRIMSON_BOOKSHELF.get())
                 .add(BlockInit.WARPED_BOOKSHELF.get())
 
@@ -129,6 +146,21 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         BlockInit.HARDENED_BRICKS_SLABS.values().forEach(block -> tag(BlockTags.NEEDS_DIAMOND_TOOL).add(block.get()));
 
         BlockInit.HARDENED_BRICKS_SLABS.values().forEach(block -> tag(BlockTags.SLABS).add(block.get()));
+
+        tag(BlockTags.SLABS)
+                .add(BlockInit.WHITE_SAND_SLAB.get())
+                .add(BlockInit.DARK_EARTHEN_WALL_SLAB.get())
+                .add(BlockInit.BROWN_EARTHEN_WALL_SLAB.get())
+                .add(BlockInit.LIGHT_EARTHEN_WALL_SLAB.get())
+                .add(BlockInit.GRAVELLY_SOIL_SLAB.get())
+
+                .add(BlockInit.IRON_FLOOR_SLAB.get())
+                .add(BlockInit.IRON_BRICKS_SLAB.get())
+                .add(BlockInit.GOLD_BRICKS_SLAB.get())
+                .add(BlockInit.STONE_PAVEMENT_SLAB.get())
+                .add(BlockInit.BEDROCK_PAVEMENT_SLAB.get())
+                .add(BlockInit.SANDSTONE_PAVEMENT_SLAB.get())
+        ;
 
         tag(BlockTags.BUTTONS).add(BlockInit.INVISIBLE_BUTTON.get());
 

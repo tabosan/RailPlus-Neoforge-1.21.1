@@ -58,6 +58,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlockWithItem(BlockInit.CHERRY_BOOKSHELF.get());
         horizontalBlockWithItem(BlockInit.DARK_OAK_BOOKSHELF.get());
         horizontalBlockWithItem(BlockInit.MANGROVE_BOOKSHELF.get());
+        horizontalBlockWithItem(BlockInit.BAMBOO_BOOKSHELF.get());
         horizontalBlockWithItem(BlockInit.CRIMSON_BOOKSHELF.get());
         horizontalBlockWithItem(BlockInit.WARPED_BOOKSHELF.get());
 
@@ -80,6 +81,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(BlockInit.LIGHT_EARTHEN_WALL);
         blockWithItem(BlockInit.GRAVELLY_SOIL);
 
+        slabBlockWithItem(BlockInit.WHITE_SAND_SLAB.get(), BlockInit.WHITE_SAND.get());
+        slabBlockWithItem(BlockInit.DARK_EARTHEN_WALL_SLAB.get(), BlockInit.DARK_EARTHEN_WALL.get());
+        slabBlockWithItem(BlockInit.BROWN_EARTHEN_WALL_SLAB.get(), BlockInit.BROWN_EARTHEN_WALL.get());
+        slabBlockWithItem(BlockInit.LIGHT_EARTHEN_WALL_SLAB.get(), BlockInit.LIGHT_EARTHEN_WALL.get());
+        slabBlockWithItem(BlockInit.GRAVELLY_SOIL_SLAB.get(), BlockInit.GRAVELLY_SOIL.get());
+
         rotatedPillarBlockWithItem(BlockInit.SHIKKUI.get());
         rotatedPillarBlockWithItem(BlockInit.TATAMI.get());
         rotatedPillarBlockWithItem(BlockInit.GREEN_TATAMI.get());
@@ -88,13 +95,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(BlockInit.IRON_FLOOR);
         blockWithItem(BlockInit.DIAMOND_FLOOR);
         blockWithItem(BlockInit.EMERALD_FLOOR);
-
         blockWithItem(BlockInit.IRON_BRICKS);
         blockWithItem(BlockInit.GOLD_BRICKS);
-
         pavementBlockWithItem(BlockInit.STONE_PAVEMENT.get());
         pavementBlockWithItem(BlockInit.BEDROCK_PAVEMENT.get());
         pavementBlockWithItem(BlockInit.SANDSTONE_PAVEMENT.get());
+
+        slabBlockWithItem(BlockInit.IRON_FLOOR_SLAB.get(), BlockInit.IRON_FLOOR.get());
+        slabBlockWithItem(BlockInit.IRON_BRICKS_SLAB.get(), BlockInit.IRON_BRICKS.get());
+        slabBlockWithItem(BlockInit.GOLD_BRICKS_SLAB.get(), BlockInit.GOLD_BRICKS.get());
+        slabBlockWithItem(BlockInit.STONE_PAVEMENT_SLAB.get(), BlockInit.STONE_PAVEMENT.get());
+        slabBlockWithItem(BlockInit.BEDROCK_PAVEMENT_SLAB.get(), BlockInit.BEDROCK_PAVEMENT.get());
+        slabBlockWithItem(BlockInit.SANDSTONE_PAVEMENT_SLAB.get(), BlockInit.SANDSTONE_PAVEMENT.get());
 
         rotatedPillarBlockWithItem(BlockInit.DITCH.get());
 

@@ -55,7 +55,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockInit.WHITE_SMOOTH_BONE_TILE.get());
         dropSelf(BlockInit.GRAY_SMOOTH_BONE_TILE.get());
 
-
         dropSelf(BlockInit.OAK_BOOKSHELF.get());
         dropSelf(BlockInit.SPRUCE_BOOKSHELF.get());
         dropSelf(BlockInit.BIRCH_BOOKSHELF.get());
@@ -64,6 +63,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockInit.CHERRY_BOOKSHELF.get());
         dropSelf(BlockInit.DARK_OAK_BOOKSHELF.get());
         dropSelf(BlockInit.MANGROVE_BOOKSHELF.get());
+        dropSelf(BlockInit.BAMBOO_BOOKSHELF.get());
         dropSelf(BlockInit.CRIMSON_BOOKSHELF.get());
         dropSelf(BlockInit.WARPED_BOOKSHELF.get());
 
@@ -95,6 +95,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockInit.LIGHT_EARTHEN_WALL.get());
         dropSelf(BlockInit.GRAVELLY_SOIL.get());
 
+        add(BlockInit.WHITE_SAND_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.WHITE_SAND_SLAB.get()));
+        add(BlockInit.DARK_EARTHEN_WALL_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.DARK_EARTHEN_WALL_SLAB.get()));
+        add(BlockInit.BROWN_EARTHEN_WALL_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.BROWN_EARTHEN_WALL_SLAB.get()));
+        add(BlockInit.LIGHT_EARTHEN_WALL_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.LIGHT_EARTHEN_WALL_SLAB.get()));
+        add(BlockInit.GRAVELLY_SOIL_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.GRAVELLY_SOIL_SLAB.get()));
+
         dropSelf(BlockInit.SHIKKUI.get());
         dropSelf(BlockInit.TATAMI.get());
         dropSelf(BlockInit.GREEN_TATAMI.get());
@@ -103,13 +114,24 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockInit.IRON_FLOOR.get());
         dropSelf(BlockInit.DIAMOND_FLOOR.get());
         dropSelf(BlockInit.EMERALD_FLOOR.get());
-
         dropSelf(BlockInit.IRON_BRICKS.get());
         dropSelf(BlockInit.GOLD_BRICKS.get());
-
         dropSelf(BlockInit.STONE_PAVEMENT.get());
         dropSelf(BlockInit.BEDROCK_PAVEMENT.get());
         dropSelf(BlockInit.SANDSTONE_PAVEMENT.get());
+
+        add(BlockInit.IRON_FLOOR_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.IRON_FLOOR_SLAB.get()));
+        add(BlockInit.IRON_BRICKS_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.IRON_BRICKS_SLAB.get()));
+        add(BlockInit.GOLD_BRICKS_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.GOLD_BRICKS_SLAB.get()));
+        add(BlockInit.STONE_PAVEMENT_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.STONE_PAVEMENT_SLAB.get()));
+        add(BlockInit.BEDROCK_PAVEMENT_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.BEDROCK_PAVEMENT_SLAB.get()));
+        add(BlockInit.SANDSTONE_PAVEMENT_SLAB.get(),
+                block -> createSlabItemTable(BlockInit.SANDSTONE_PAVEMENT_SLAB.get()));
 
         dropSelf(BlockInit.DITCH.get());
 

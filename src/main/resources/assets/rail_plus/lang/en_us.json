@@ -1,7 +1,7 @@
 {
-  "item.rail_plus.rusted_rail": "Rusted Rail",
-  "item.rail_plus.rusted_rail_bundle": "Rusted Rail Bundle",
-  "item.rail_plus.rusted_rail_stack": "Rusted Rail Stack",
+  "item.rail_plus.rusted_track": "Rusted Track",
+  "item.rail_plus.rusted_track_bundle": "Rusted Track Bundle",
+  "item.rail_plus.rusted_track_stack": "Rusted Track Stack",
 
   "item.rail_plus.ender_dust": "Ender Dust",
   "item.rail_plus.ender_steel_ingot": "Ender Steel Ingot",
@@ -135,6 +135,12 @@
   "block.rail_plus.light_earthen_wall": "Light Earthen Wall",
   "block.rail_plus.gravelly_soil": "Gravelly Soil",
 
+  "block.rail_plus.white_sand_slab": "White Sand Slab",
+  "block.rail_plus.dark_earthen_wall_slab": "Dark Earthen Wall Slab",
+  "block.rail_plus.brown_earthen_wall_slab": "Brown Earthen Wall Slab",
+  "block.rail_plus.light_earthen_wall_slab": "Light Earthen Wall Slab",
+  "block.rail_plus.gravelly_soil_slab": "Gravelly Soil Slab",
+
   "block.rail_plus.shikkui": "Shikkui",
   "block.rail_plus.tatami": "Tatami",
   "block.rail_plus.green_tatami": "Green Tatami",
@@ -143,13 +149,19 @@
   "block.rail_plus.iron_floor": "Iron Floor",
   "block.rail_plus.diamond_floor": "Diamond Floor",
   "block.rail_plus.emerald_floor": "Emerald Floor",
-
   "block.rail_plus.iron_bricks": "Iron Bricks",
   "block.rail_plus.gold_bricks": "Gold Bricks",
-
   "block.rail_plus.stone_pavement": "Stone Pavement",
   "block.rail_plus.bedrock_pavement": "Bedrock Pavement",
   "block.rail_plus.sandstone_pavement": "Sandstone Pavement",
+
+  "block.rail_plus.iron_floor_slab": "Iron Floor Slab",
+  "block.rail_plus.iron_bricks_slab": "Iron Bricks Slab",
+  "block.rail_plus.gold_bricks_slab": "Gold Bricks Slab",
+  "block.rail_plus.stone_pavement_slab": "Stone Pavement Slab",
+  "block.rail_plus.bedrock_pavement_slab": "Bedrock Pavement Slab",
+  "block.rail_plus.sandstone_pavement_slab": "Sandstone Pavement Slab",
+
 
   "block.rail_plus.ditch": "Ditch",
 

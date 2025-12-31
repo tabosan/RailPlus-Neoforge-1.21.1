@@ -122,6 +122,7 @@ public class BlockInit {
         }
     }
 
+    //bone tiles
     public static final DeferredBlock<RotatedPillarBlock> BONE_TILE = registerBlock("bone_tile",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.SAND)
@@ -303,6 +304,15 @@ public class BlockInit {
                     .ignitedByLava()
             ));
 
+    public static final DeferredBlock<BookshelfBlock> BAMBOO_BOOKSHELF = registerBlock("bamboo_bookshelf",
+            () -> new BookshelfBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.5F,6.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+            ));
+
     public static final DeferredBlock<BookshelfBlock> CRIMSON_BOOKSHELF = registerBlock("crimson_bookshelf",
             () -> new BookshelfBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.CRIMSON_STEM)
@@ -442,6 +452,7 @@ public class BlockInit {
                     .noOcclusion()
             ));
 
+    //vending machines
     public static final DeferredBlock<VendingMachineBlock> WHITE_VENDING_MACHINE = registerBlock("white_vending_machine",
             () -> new VendingMachineBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.SNOW)
@@ -550,33 +561,20 @@ public class BlockInit {
                     .sound(SoundType.GRAVEL)
             ));
 
-    public static final DeferredBlock<RotatedPillarBlock> SHIKKUI = registerBlock("shikkui",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.SNOW)
-                    .strength(0.5F)
-                    .sound(SoundType.WOOL)
-            ));
+    public static final DeferredBlock<SlabBlock> WHITE_SAND_SLAB = registerBlock("white_sand_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(WHITE_SAND.get())));
 
-    public static final DeferredBlock<RotatedPillarBlock> TATAMI = registerBlock("tatami",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_LIGHT_GREEN)
-                    .strength(0.5F)
-                    .sound(SoundType.WOOL)
-            ));
+    public static final DeferredBlock<SlabBlock> DARK_EARTHEN_WALL_SLAB = registerBlock("dark_earthen_wall_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(DARK_EARTHEN_WALL.get())));
 
-    public static final DeferredBlock<RotatedPillarBlock> GREEN_TATAMI = registerBlock("green_tatami",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_GREEN)
-                    .strength(0.5F)
-                    .sound(SoundType.WOOL)
-            ));
+    public static final DeferredBlock<SlabBlock> BROWN_EARTHEN_WALL_SLAB = registerBlock("brown_earthen_wall_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(BROWN_EARTHEN_WALL.get())));
 
-    public static final DeferredBlock<RotatedPillarBlock> BROWN_TATAMI = registerBlock("brown_tatami",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_BROWN)
-                    .strength(0.5F)
-                    .sound(SoundType.WOOL)
-            ));
+    public static final DeferredBlock<SlabBlock> LIGHT_EARTHEN_WALL_SLAB = registerBlock("light_earthen_wall_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(LIGHT_EARTHEN_WALL.get())));
+
+    public static final DeferredBlock<SlabBlock> GRAVELLY_SOIL_SLAB = registerBlock("gravelly_soil_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(GRAVELLY_SOIL.get())));
 
     public static final DeferredBlock<Block> IRON_FLOOR = registerBlock("iron_floor",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -646,6 +644,52 @@ public class BlockInit {
                     .requiresCorrectToolForDrops()
                     .strength(1.5f,9.0f)
                     .sound(SoundType.STONE)
+            ));
+
+    public static final DeferredBlock<SlabBlock> IRON_FLOOR_SLAB = registerBlock("iron_floor_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(IRON_FLOOR.get())));
+
+    public static final DeferredBlock<SlabBlock> IRON_BRICKS_SLAB = registerBlock("iron_bricks_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(IRON_BRICKS.get())));
+
+    public static final DeferredBlock<SlabBlock> GOLD_BRICKS_SLAB = registerBlock("gold_bricks_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(GOLD_BRICKS.get())));
+
+    public static final DeferredBlock<SlabBlock> STONE_PAVEMENT_SLAB = registerBlock("stone_pavement_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(STONE_PAVEMENT.get())));
+
+    public static final DeferredBlock<SlabBlock> BEDROCK_PAVEMENT_SLAB = registerBlock("bedrock_pavement_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(BEDROCK_PAVEMENT.get())));
+
+    public static final DeferredBlock<SlabBlock> SANDSTONE_PAVEMENT_SLAB = registerBlock("sandstone_pavement_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(SANDSTONE_PAVEMENT.get())));
+
+    public static final DeferredBlock<RotatedPillarBlock> SHIKKUI = registerBlock("shikkui",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW)
+                    .strength(0.5F)
+                    .sound(SoundType.WOOL)
+            ));
+
+    public static final DeferredBlock<RotatedPillarBlock> TATAMI = registerBlock("tatami",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_LIGHT_GREEN)
+                    .strength(0.5F)
+                    .sound(SoundType.WOOL)
+            ));
+
+    public static final DeferredBlock<RotatedPillarBlock> GREEN_TATAMI = registerBlock("green_tatami",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_GREEN)
+                    .strength(0.5F)
+                    .sound(SoundType.WOOL)
+            ));
+
+    public static final DeferredBlock<RotatedPillarBlock> BROWN_TATAMI = registerBlock("brown_tatami",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BROWN)
+                    .strength(0.5F)
+                    .sound(SoundType.WOOL)
             ));
 
     public static final DeferredBlock<RotatedPillarBlock> DITCH = registerBlock("ditch",
