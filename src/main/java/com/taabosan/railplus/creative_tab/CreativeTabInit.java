@@ -43,6 +43,19 @@ public class CreativeTabInit {
                 HARDENED_BRICKS.values().forEach(output::accept);
                 HARDENED_BRICKS_SLABS.values().forEach(output::accept);
 
+                output.accept(BlockInit.BONE_TILE);
+                output.accept(BlockInit.CREAM_BONE_TILE);
+                output.accept(BlockInit.IVORY_BONE_TILE);
+                output.accept(BlockInit.BEIGE_BONE_TILE);
+                output.accept(BlockInit.SMOOTH_BONE_TILE);
+                output.accept(BlockInit.CREAM_SMOOTH_BONE_TILE);
+                output.accept(BlockInit.IVORY_SMOOTH_BONE_TILE);
+                output.accept(BlockInit.BEIGE_SMOOTH_BONE_TILE);
+                output.accept(BlockInit.KHAKI_SMOOTH_BONE_TILE);
+                output.accept(BlockInit.BLUE_SMOOTH_BONE_TILE);
+                output.accept(BlockInit.WHITE_SMOOTH_BONE_TILE);
+                output.accept(BlockInit.GRAY_SMOOTH_BONE_TILE);
+
                 output.accept(BlockInit.OAK_BOOKSHELF);
                 output.accept(BlockInit.SPRUCE_BOOKSHELF);
                 output.accept(BlockInit.BIRCH_BOOKSHELF);

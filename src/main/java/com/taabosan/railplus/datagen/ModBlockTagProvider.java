@@ -24,6 +24,19 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
                 .add(BlockInit.INVISIBLE_BUTTON.get())
 
+                .add(BlockInit.BONE_TILE.get())
+                .add(BlockInit.CREAM_BONE_TILE.get())
+                .add(BlockInit.IVORY_BONE_TILE.get())
+                .add(BlockInit.CREAM_BONE_TILE.get())
+                .add(BlockInit.SMOOTH_BONE_TILE.get())
+                .add(BlockInit.CREAM_SMOOTH_BONE_TILE.get())
+                .add(BlockInit.IVORY_SMOOTH_BONE_TILE.get())
+                .add(BlockInit.CREAM_SMOOTH_BONE_TILE.get())
+                .add(BlockInit.KHAKI_SMOOTH_BONE_TILE.get())
+                .add(BlockInit.BLUE_SMOOTH_BONE_TILE.get())
+                .add(BlockInit.WHITE_SMOOTH_BONE_TILE.get())
+                .add(BlockInit.GRAY_SMOOTH_BONE_TILE.get())
+
                 .add(BlockInit.IRON_LADDER.get())
 
                 .add(BlockInit.WHITE_VENDING_MACHINE.get())

@@ -42,6 +42,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                     block -> createSlabItemTable(BlockInit.HARDENED_BRICKS_SLABS.get(type).get()));
         }
 
+        dropSelf(BlockInit.BONE_TILE.get());
+        dropSelf(BlockInit.CREAM_BONE_TILE.get());
+        dropSelf(BlockInit.IVORY_BONE_TILE.get());
+        dropSelf(BlockInit.BEIGE_BONE_TILE.get());
+        dropSelf(BlockInit.SMOOTH_BONE_TILE.get());
+        dropSelf(BlockInit.CREAM_SMOOTH_BONE_TILE.get());
+        dropSelf(BlockInit.IVORY_SMOOTH_BONE_TILE.get());
+        dropSelf(BlockInit.BEIGE_SMOOTH_BONE_TILE.get());
+        dropSelf(BlockInit.KHAKI_SMOOTH_BONE_TILE.get());
+        dropSelf(BlockInit.BLUE_SMOOTH_BONE_TILE.get());
+        dropSelf(BlockInit.WHITE_SMOOTH_BONE_TILE.get());
+        dropSelf(BlockInit.GRAY_SMOOTH_BONE_TILE.get());
+
+
         dropSelf(BlockInit.OAK_BOOKSHELF.get());
         dropSelf(BlockInit.SPRUCE_BOOKSHELF.get());
         dropSelf(BlockInit.BIRCH_BOOKSHELF.get());

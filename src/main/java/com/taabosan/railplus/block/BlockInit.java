@@ -122,6 +122,114 @@ public class BlockInit {
         }
     }
 
+    public static final DeferredBlock<RotatedPillarBlock> BONE_TILE = registerBlock("bone_tile",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+
+    public static final DeferredBlock<RotatedPillarBlock> CREAM_BONE_TILE = registerBlock("cream_bone_tile",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+
+    public static final DeferredBlock<RotatedPillarBlock> IVORY_BONE_TILE = registerBlock("ivory_bone_tile",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+
+    public static final DeferredBlock<RotatedPillarBlock> BEIGE_BONE_TILE = registerBlock("beige_bone_tile",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+
+    public static final DeferredBlock<Block> SMOOTH_BONE_TILE = registerBlock("smooth_bone_tile",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+
+    public static final DeferredBlock<Block> CREAM_SMOOTH_BONE_TILE = registerBlock("cream_smooth_bone_tile",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+
+    public static final DeferredBlock<Block> IVORY_SMOOTH_BONE_TILE = registerBlock("ivory_smooth_bone_tile",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+
+    public static final DeferredBlock<Block> BEIGE_SMOOTH_BONE_TILE = registerBlock("beige_smooth_bone_tile",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+
+    public static final DeferredBlock<Block> KHAKI_SMOOTH_BONE_TILE = registerBlock("khaki_smooth_bone_tile",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+
+    public static final DeferredBlock<Block> BLUE_SMOOTH_BONE_TILE = registerBlock("blue_smooth_bone_tile",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+
+    public static final DeferredBlock<Block> WHITE_SMOOTH_BONE_TILE = registerBlock("white_smooth_bone_tile",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+
+    public static final DeferredBlock<Block> GRAY_SMOOTH_BONE_TILE = registerBlock("gray_smooth_bone_tile",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .sound(SoundType.BONE_BLOCK)
+            ));
+
     //wooden bookshelf
     public static final DeferredBlock<BookshelfBlock> OAK_BOOKSHELF = registerBlock("oak_bookshelf",
             () -> new BookshelfBlock(BlockBehaviour.Properties.of()

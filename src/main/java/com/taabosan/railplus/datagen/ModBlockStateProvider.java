@@ -23,6 +23,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         buttonBlockWithItem(BlockInit.INVISIBLE_BUTTON.get());
 
+        blockItem(BlockInit.FLAT_LAMP.get());
+        blockItem(BlockInit.SQUARE_LAMP.get());
+
         for (FramedLampColor color : FramedLampColor.values()) {
             blockWithItem(BlockInit.FRAMED_LAMPS.get(color));
             slabBlockWithItem(BlockInit.FRAMED_LAMP_SLABS.get(color).get(), BlockInit.FRAMED_LAMPS.get(color).get());
@@ -33,9 +36,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
             slabBlockWithItem(BlockInit.HARDENED_BRICKS_SLABS.get(type).get(), BlockInit.HARDENED_BRICKS.get(type).get());
         }
 
-        blockItem(BlockInit.FLAT_LAMP.get());
+        rotatedPillarBlockWithItem(BlockInit.BONE_TILE.get());
+        rotatedPillarBlockWithItem(BlockInit.CREAM_BONE_TILE.get());
+        rotatedPillarBlockWithItem(BlockInit.IVORY_BONE_TILE.get());
+        rotatedPillarBlockWithItem(BlockInit.BEIGE_BONE_TILE.get());
 
-        blockItem(BlockInit.SQUARE_LAMP.get());
+        smoothBlockWithItem(BlockInit.SMOOTH_BONE_TILE.get(), BlockInit.BONE_TILE.get());
+        smoothBlockWithItem(BlockInit.CREAM_SMOOTH_BONE_TILE.get(), BlockInit.CREAM_BONE_TILE.get());
+        smoothBlockWithItem(BlockInit.IVORY_SMOOTH_BONE_TILE.get(), BlockInit.IVORY_BONE_TILE.get());
+        smoothBlockWithItem(BlockInit.BEIGE_SMOOTH_BONE_TILE.get(), BlockInit.BEIGE_BONE_TILE.get());
+        blockWithItem(BlockInit.KHAKI_SMOOTH_BONE_TILE);
+        blockWithItem(BlockInit.BLUE_SMOOTH_BONE_TILE);
+        blockWithItem(BlockInit.WHITE_SMOOTH_BONE_TILE);
+        blockWithItem(BlockInit.GRAY_SMOOTH_BONE_TILE);
 
         horizontalBlockWithItem(BlockInit.OAK_BOOKSHELF.get());
         horizontalBlockWithItem(BlockInit.SPRUCE_BOOKSHELF.get());
@@ -125,6 +138,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void rotatedPillarBlockWithItem(Block block){
         axisBlock((RotatedPillarBlock) block, blockTexture(block).withSuffix("_side"), blockTexture(block).withSuffix("_top"));
         blockItem(block);
+    }
+
+    private void smoothBlockWithItem(Block block, Block fullTextureBlock){
+        simpleBlockWithItem(block, models().cubeAll(getName(block), blockTexture(fullTextureBlock).withSuffix("_top")));
     }
 
     private void stairsBlockWithItem(Block block, Block fullTextureBlock) {
